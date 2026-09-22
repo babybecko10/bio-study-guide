@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IB Bio SL — Your Chill Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f7f1e8;
+    --peach: #fce6d4;
+    --rose: #f8d7d0;
+    --sage: #cde3d5;
+    --sky: #cfe3ee;
+    --lavender: #e0d7ee;
+    --ink: #2b2b3b;
+    --muted: #6b6b7d;
+    --accent: #c76a4a;
+    --accent2: #4a7ab8;
+    --accent3: #6b8f5c;
+    --gold: #d4a24c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: linear-gradient(180deg, #fdf6ec 0%, #f7ede0 100%);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .hero {
+    background: linear-gradient(135deg, #f8d7d0 0%, #fce6d4 50%, #cde3d5 100%);
+    padding: 80px 40px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "🧬";
+    position: absolute;
+    font-size: 340px;
+    opacity: 0.07;
+    top: -40px; right: -30px;
+    transform: rotate(15deg);
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 62px;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+  .hero .subtitle {
+    font-size: 20px;
+    color: var(--muted);
+    font-weight: 400;
+    max-width: 640px;
+    margin: 0 auto 30px;
+  }
+  .hero .chip {
+    display: inline-block;
+    background: white;
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    box-shadow: 0 4px 20px rgba(199,106,74,0.15);
+    margin: 6px;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .toc {
+    background: white;
+    border-radius: 24px;
+    padding: 36px 40px;
+    margin-top: -60px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    margin-bottom: 60px;
+  }
+  .toc h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: item;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+  }
+  .toc li {
+    counter-increment: item;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e6d9c8;
+  }
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    transition: color 0.2s;
+  }
+  .toc a::before {
+    content: counter(item, decimal-leading-zero);
+    color: var(--accent);
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    min-width: 30px;
+  }
+  .toc a:hover { color: var(--accent); }
+
+  section {
+    background: white;
+    border-radius: 28px;
+    padding: 50px 44px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--accent), var(--gold), var(--accent3));
+  }
+  .section-tag {
+    display: inline-block;
+    background: var(--peach);
+    color: var(--accent);
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  h2.section-title {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    margin: 34px 0 12px;
+    color: var(--ink);
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 8px;
+    color: var(--accent2);
+  }
+  p { margin-bottom: 12px; }
+  strong { color: var(--accent); font-weight: 600; }
+  em { color: var(--accent2); }
+
+  .callout {
+    background: linear-gradient(135deg, #fce6d4, #f8d7d0);
+    padding: 22px 26px;
+    border-radius: 18px;
+    margin: 22px 0;
+    border-left: 5px solid var(--accent);
+  }
+  .callout-tip {
+    background: linear-gradient(135deg, #cde3d5, #dbeee0);
+    border-left-color: var(--accent3);
+  }
+  .callout-warn {
+    background: linear-gradient(135deg, #ffe9d9, #ffd9b8);
+    border-left-color: var(--gold);
+  }
+  .callout-video {
+    background: linear-gradient(135deg, #e0d7ee, #cfe3ee);
+    border-left-color: var(--accent2);
+  }
+  .callout h4 { margin-top: 0; color: var(--ink); }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 24px 0;
+  }
+  .card {
+    background: var(--cream);
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid #ecdfcd;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+  .card .emoji {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+  .card h4 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 16px;
+  }
+  .card p { font-size: 14px; color: var(--muted); margin-bottom: 0; }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  th {
+    background: var(--sky);
+    color: var(--ink);
+    padding: 14px 16px;
+    text-align: left;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+  }
+  td {
+    padding: 13px 16px;
+    border-bottom: 1px solid #f0e8db;
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #fdf9f2; }
+
+  ul.pretty, ol.pretty {
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.pretty li, ol.pretty li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+  }
+  ul.pretty li::before {
+    content: "◆";
+    position: absolute;
+    left: 5px;
+    color: var(--accent);
+    font-size: 12px;
+    top: 12px;
+  }
+  ol.pretty {
+    counter-reset: prettyol;
+  }
+  ol.pretty li {
+    counter-increment: prettyol;
+  }
+  ol.pretty li::before {
+    content: counter(prettyol);
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background: var(--accent);
+    color: white;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .diagram {
+    background: linear-gradient(180deg, #fdf9f2, #f7ede0);
+    border-radius: 18px;
+    padding: 30px;
+    margin: 24px 0;
+    text-align: center;
+  }
+  .diagram svg { max-width: 100%; height: auto; }
+  .diagram-caption {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  .mnemonic {
+    background: linear-gradient(135deg, #fff4e0, #ffe4c4);
+    padding: 24px;
+    border-radius: 18px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .mnemonic .letters {
+    font-family: 'Fraunces', serif;
+    font-size: 42px;
+    letter-spacing: 4px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #c76a4a, #d4a24c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
+  }
+
+  .video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 500;
+    margin: 6px 6px 6px 0;
+    border: 2px solid var(--peach);
+    transition: all 0.2s;
+    font-size: 14px;
+  }
+  .video-link:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  .video-link::before {
+    content: "▶";
+    color: red;
+    font-size: 14px;
+  }
+  .video-link:hover::before { color: white; }
+
+  .quiz {
+    background: var(--lavender);
+    padding: 26px;
+    border-radius: 18px;
+    margin: 26px 0;
+  }
+  .quiz h4 { color: var(--accent2); margin-top: 0; }
+  .quiz details {
+    background: white;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  .quiz summary {
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quiz summary::after {
+    content: "▼";
+    color: var(--accent2);
+    font-size: 10px;
+    transition: transform 0.2s;
+  }
+  .quiz details[open] summary::after { transform: rotate(180deg); }
+  .quiz .answer {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px dashed #ddd;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .quiz .answer strong { color: var(--accent3); }
+
+  .footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .footer .heart { color: var(--accent); }
+
+  .term {
+    background: #fff4e0;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.95em;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  @media (max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; }
+    .toc ol { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 40px; }
+    section { padding: 30px 22px; }
+  }
+
+  /* Cute cell diagram */
+  .cell-diagram {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .cell {
+    text-align: center;
+  }
+  .cell-visual {
+    width: 200px; height: 140px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cell.prok .cell-visual {
+    background: linear-gradient(135deg, #cde3d5, #9bc5ac);
+    border: 3px solid #6b8f5c;
+  }
+  .cell.euk .cell-visual {
+    background: linear-gradient(135deg, #f8d7d0, #e8a89a);
+    border: 3px solid #c76a4a;
+  }
+  .cell-visual .nucleus {
+    width: 50px; height: 50px;
+    background: #6b4e8f;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #a68bc4;
+  }
+  .cell-visual .dots {
+    position: absolute;
+    top: 20%; left: 30%;
+    color: #333;
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Cells, Membranes & Life ✨</h1>
+  <p class="subtitle">Your friendly, no-panic guide to IB Biology SL — A2.2, B2.1, B2.2, and B2.3. Made so future-you thanks past-you.</p>
+  <div>
+    <span class="chip">🔬 Cell Structure</span>
+    <span class="chip">💧 Membrane Transport</span>
+    <span class="chip">🏛️ Organelles</span>
+    <span class="chip">🌱 Cell Specialization</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="toc">
+  <h2>📚 What we're covering</h2>
+  <ol>
+    <li><a href="#big-picture">The big picture (start here)</a></li>
+    <li><a href="#cell-theory">Cell theory & microscopy</a></li>
+    <li><a href="#common">What ALL cells have</a></li>
+    <li><a href="#prokaryotes">Prokaryotic cells</a></li>
+    <li><a href="#eukaryotes">Eukaryotic cells & organelles</a></li>
+    <li><a href="#life-functions">Functions of life</a></li>
+    <li><a href="#comparing">Animal vs. plant vs. fungi</a></li>
+    <li><a href="#atypical">Weird cells (atypical)</a></li>
+    <li><a href="#membrane-structure">Membrane structure</a></li>
+    <li><a href="#transport">Transport across membranes</a></li>
+    <li><a href="#osmosis">Osmosis (the special one)</a></li>
+    <li><a href="#compartments">Compartmentalization</a></li>
+    <li><a href="#stem-cells">Stem cells & differentiation</a></li>
+    <li><a href="#sa-vol">Surface area to volume</a></li>
+    <li><a href="#exam-tips">Exam-day tips</a></li>
+    <li><a href="#quiz">Self-quiz</a></li>
+  </ol>
+</div>
+
+<!-- ================= BIG PICTURE ================ -->
+<section id="big-picture">
+  <span class="section-tag">Start here</span>
+  <h2 class="section-title">The big picture 🗺️</h2>
+  <p class="section-sub">Before you drown in vocabulary, here's the whole story in 60 seconds.</p>
+
+  <p>Every living thing is made of tiny bags called <span class="term">cells</span>. Each cell is basically a <em>little factory</em> wrapped in a fatty skin (the <strong>membrane</strong>). Inside, there's watery goo (<strong>cytoplasm</strong>), an instruction manual (<strong>DNA</strong>), and machines that read those instructions to build proteins (<strong>ribosomes</strong>). That's it. That's every cell.</p>
+
+  <p>There are two big flavors:</p>
+
+  <div class="cell-diagram">
+    <div class="cell prok">
+      <div class="cell-visual">
+        <span class="dots">• • • • • •</span>
+      </div>
+      <strong>Prokaryote</strong>
+      <p style="font-size:13px;color:var(--muted)">Simple. Small. No nucleus.<br>Bacteria & archaea.</p>
+    </div>
+    <div class="cell euk">
+      <div class="cell-visual">
+        <div class="nucleus"></div>
+      </div>
+      <strong>Eukaryote</strong>
+      <p style="font-size:13px;color:var(--muted)">Complex. Big. Has a nucleus.<br>Animals, plants, fungi, protists.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-tip">
+    <h4>🧠 The one mental model to keep</h4>
+    <p>Cells are cities. The <strong>membrane</strong> is the city wall. The <strong>nucleus</strong> is city hall (holds the master plan). The <strong>mitochondria</strong> are power plants. The <strong>ribosomes</strong> are factories. The <strong>Golgi</strong> is the post office. When something is confusing, translate it back to the city.</p>
+  </div>
+</section>
+
+<!-- ================ CELL THEORY & MICROSCOPY ================ -->
+<section id="cell-theory">
+  <span class="section-tag">A2.2.1 – A2.2.3</span>
+  <h2 class="section-title">Cell theory & microscopy 🔬</h2>
+  <p class="section-sub">The rules everyone agrees on, and the tools that let us see the tiny stuff.</p>
+
+  <h3>The three rules of cell theory</h3>
+  <ol class="pretty">
+    <li><strong>All living things are made of cells.</strong></li>
+    <li><strong>The cell is the basic unit of life.</strong></li>
+    <li><strong>All cells come from pre-existing cells.</strong> (No cell magically appears from goo.)</li>
+  </ol>
+
+  <div class="callout">
+    <h4>💡 NOS: Inductive vs. deductive reasoning</h4>
+    <p><strong>Inductive</strong> = many observations → general rule. ("Every cell I've seen has DNA... so all cells probably have DNA.")</p>
+    <p><strong>Deductive</strong> = general rule → specific prediction. ("All cells have DNA, so THIS newly-discovered animal has cells with DNA.")</p>
+  </div>
+
+  <h3>Calculating magnification 🧮</h3>
+  <p>This is one of the few actual math formulas in this whole unit. Memorize it:</p>
+
+  <div class="mnemonic">
+    <div style="font-size:15px;color:var(--muted);">Magnification =</div>
+    <div class="letters">Drawing ÷ Actual</div>
+    <div style="font-size:14px;color:var(--muted);">(size of the image ÷ real size)</div>
+  </div>
+
+  <div class="callout callout-tip">
+    <h4>📏 Step-by-step</h4>
+    <ol class="pretty">
+      <li>Find the <strong>actual size</strong> from the scale bar (e.g. "50 μm").</li>
+      <li>Measure the <strong>drawing size</strong> with a ruler (e.g. scale bar is 20 mm).</li>
+      <li><strong>Convert units!</strong> Make them match. (20 mm = 20,000 μm)</li>
+      <li>Divide: 20,000 ÷ 50 = <strong>×400 magnification</strong>.</li>
+    </ol>
+    <p style="margin-top:12px;font-size:14px"><strong>Unit cheat-sheet:</strong> 1 mm = 1,000 μm = 1,000,000 nm</p>
+  </div>
+
+  <h3>Types of microscopes</h3>
+
+  <table>
+    <tr><th>Type</th><th>How it works</th><th>Pros & cons</th></tr>
+    <tr>
+      <td><strong>Light microscope</strong></td>
+      <td>Uses visible light + glass lenses.</td>
+      <td>✅ Cheap, samples can be alive & in color.<br>❌ Low resolution (can't see anything smaller than ~200 nm).</td>
+    </tr>
+    <tr>
+      <td><strong>Electron microscope (EM)</strong></td>
+      <td>Fires electrons at the sample instead of light.</td>
+      <td>✅ Insanely high magnification & resolution.<br>❌ Expensive. Sample must be dead. Black & white only.</td>
+    </tr>
+    <tr>
+      <td><strong>Immunofluorescence</strong></td>
+      <td>Antibodies that glow are attached to specific cell parts.</td>
+      <td>✅ You can literally light up specific organelles in different colors.</td>
+    </tr>
+    <tr>
+      <td><strong>Cryogenic EM</strong></td>
+      <td>Freeze the sample, then EM it.</td>
+      <td>✅ Atoms hold still → you can image huge molecules like proteins & viruses.</td>
+    </tr>
+    <tr>
+      <td><strong>Freeze-fracture</strong></td>
+      <td>Freeze, then snap the sample open along the membrane.</td>
+      <td>✅ Lets us peek at proteins <em>inside</em> the membrane.</td>
+    </tr>
+  </table>
+
+  <div class="callout callout-video">
+    <h4>🎥 Watch these before you sleep</h4>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=amoeba+sisters+cell+theory" target="_blank">Amoeba Sisters — Cell Theory</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=magnification+calculation+ib+biology" target="_blank">Magnification calculation practice</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=electron+microscopy+explained" target="_blank">Electron microscopy explained</a>
+  </div>
+</section>
+
+<!-- ================ COMMON FEATURES ================ -->
+<section id="common">
+  <span class="section-tag">A2.2.4</span>
+  <h2 class="section-title">What ALL cells have 🌟</h2>
+  <p class="section-sub">Every single cell on Earth — bacterium, moss, or elephant — shares these four things.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="emoji">🧬</div>
+      <h4>DNA</h4>
+      <p>The genetic blueprint. Tells the cell what proteins to build.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">💧</div>
+      <h4>Cytoplasm</h4>
+      <p>Water-based jelly where chemical reactions happen.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">⚙️</div>
+      <h4>Ribosomes</h4>
+      <p>Tiny protein-building machines. Read DNA instructions.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🛡️</div>
+      <h4>Plasma membrane</h4>
+      <p>The fatty outer boundary. Controls what comes in & out.</p>
+    </div>
+  </div>
+
+  <p><strong>Why does this matter?</strong> Because whenever the exam asks "what do prokaryotes and eukaryotes have in common?" — this list is the answer.</p>
+</section>
+
+<!-- ================ PROKARYOTES ================ -->
+<section id="prokaryotes">
+  <span class="section-tag">A2.2.5</span>
+  <h2 class="section-title">Prokaryotic cells 🦠</h2>
+  <p class="section-sub">The simple ones. Bacteria & archaea. No nucleus, no organelles.</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
+      <!-- flagella -->
+      <path d="M 40 130 Q 30 100 20 120 Q 15 140 25 145" stroke="#888" fill="none" stroke-width="2"/>
+      <path d="M 40 130 Q 30 160 20 155 Q 15 145 25 145" stroke="#888" fill="none" stroke-width="2"/>
+      <!-- cell wall -->
+      <ellipse cx="250" cy="130" rx="200" ry="90" fill="#cde3d5" stroke="#6b8f5c" stroke-width="4"/>
+      <!-- cell membrane -->
+      <ellipse cx="250" cy="130" rx="190" ry="82" fill="#f7ede0" stroke="#c76a4a" stroke-width="2"/>
+      <!-- nucleoid -->
+      <path d="M 200 120 Q 220 100 250 115 Q 280 130 290 110 Q 300 140 260 135 Q 220 145 200 125 Z" fill="#c76a4a" opacity="0.7"/>
+      <text x="220" y="160" font-family="Fraunces" font-size="12" fill="#333">nucleoid (DNA)</text>
+      <!-- plasmid -->
+      <ellipse cx="180" cy="170" rx="15" ry="8" fill="none" stroke="#4a7ab8" stroke-width="2"/>
+      <text x="130" y="200" font-family="Fraunces" font-size="12" fill="#4a7ab8">plasmid</text>
+      <!-- ribosomes -->
+      <circle cx="330" cy="150" r="3" fill="#6b4e8f"/>
+      <circle cx="350" cy="130" r="3" fill="#6b4e8f"/>
+      <circle cx="320" cy="180" r="3" fill="#6b4e8f"/>
+      <circle cx="365" cy="160" r="3" fill="#6b4e8f"/>
+      <text x="380" y="155" font-family="Fraunces" font-size="12" fill="#6b4e8f">70S ribosomes</text>
+      <!-- labels -->
+      <text x="20" y="50" font-family="Fraunces" font-size="12" fill="#6b8f5c">cell wall (peptidoglycan)</text>
+      <line x1="120" y1="55" x2="180" y2="80" stroke="#6b8f5c" stroke-width="1"/>
+      <text x="350" y="50" font-family="Fraunces" font-size="12" fill="#c76a4a">plasma membrane</text>
+      <line x1="380" y1="55" x2="360" y2="85" stroke="#c76a4a" stroke-width="1"/>
+      <text x="240" y="240" font-family="Fraunces" font-size="12" fill="#666">cytoplasm fills everything else</text>
+    </svg>
+    <div class="diagram-caption">Simplified prokaryote (like <em>E. coli</em> or <em>Bacillus</em>)</div>
+  </div>
+
+  <h3>The 5 must-know parts</h3>
+  <ul class="pretty">
+    <li><strong>Cell wall</strong> — made of <span class="term">peptidoglycan</span> in bacteria. Provides structure & protection. Draw it as <em>two lines</em>.</li>
+    <li><strong>Plasma membrane</strong> — the inner boundary. Made of phospholipids + proteins.</li>
+    <li><strong>Cytoplasm</strong> — the watery interior where reactions happen.</li>
+    <li><strong>Naked, looped DNA</strong> — floats free in the <span class="term">nucleoid region</span> (not a real organelle, just a zone). Sometimes there are extra small loops = <span class="term">plasmids</span>.</li>
+    <li><strong>70S ribosomes</strong> — smaller than the 80S ones in eukaryotes. Draw as tiny dots.</li>
+  </ul>
+
+  <div class="callout callout-warn">
+    <h4>⚠️ Common exam trap</h4>
+    <p>Prokaryotes do <strong>not</strong> have mitochondria, ER, Golgi, or a nucleus. If you see any of those, it's a eukaryote. Also — the DNA is <strong>naked</strong> (no histones) and <strong>circular</strong>, not linear.</p>
+  </div>
+</section>
+
+<!-- ================ EUKARYOTES ================ -->
+<section id="eukaryotes">
+  <span class="section-tag">A2.2.6 & B2.2</span>
+  <h2 class="section-title">Eukaryotic cells & their organelles 🏛️</h2>
+  <p class="section-sub">The complex ones. Compartmentalized. Full of specialized rooms called organelles.</p>
+
+  <p>An <span class="term">organelle</span> = a specialized structure inside a cell that performs a specific job. Just like <em>organs</em> in a body.</p>
+
+  <div class="callout">
+    <h4>🚨 Not everything is an organelle</h4>
+    <p><strong>Structural parts</strong> like the cell wall, cytoskeleton, and cytoplasm are NOT organelles. <strong>Functional parts</strong> like the nucleus, mitochondria, ribosomes, vesicles, and plasma membrane ARE.</p>
+  </div>
+
+  <h3>The organelle roster 🎭</h3>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="emoji">🏛️</div>
+      <h4>Nucleus</h4>
+      <p><strong>Function:</strong> stores DNA, controls the cell. Has a <em>double membrane</em> with pores for mRNA to exit.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🔋</div>
+      <h4>Mitochondria</h4>
+      <p><strong>Function:</strong> aerobic respiration → makes ATP (energy). Double membrane; inner one folded into <em>cristae</em>.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🏭</div>
+      <h4>Rough ER</h4>
+      <p><strong>Function:</strong> makes proteins for export. Covered in ribosomes → looks "rough."</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🧪</div>
+      <h4>Smooth ER</h4>
+      <p><strong>Function:</strong> makes lipids, detoxifies drugs & alcohol. No ribosomes.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">📮</div>
+      <h4>Golgi apparatus</h4>
+      <p><strong>Function:</strong> modifies & packages proteins into vesicles for shipping. Stack of flat sacs.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">📦</div>
+      <h4>Vesicles</h4>
+      <p><strong>Function:</strong> transport materials around the cell. Little membrane bubbles.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🧨</div>
+      <h4>Lysosomes</h4>
+      <p><strong>Function:</strong> contain digestive enzymes. Break down waste & old organelles.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🌿</div>
+      <h4>Chloroplasts <em>(plants only)</em></h4>
+      <p><strong>Function:</strong> photosynthesis. Double membrane, contain green chlorophyll.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🕸️</div>
+      <h4>Cytoskeleton</h4>
+      <p><strong>Function:</strong> gives shape & moves things. <em>Microtubules</em> (railways) + <em>microfilaments</em> (tension).</p>
+    </div>
+    <div class="card">
+      <div class="emoji">⚙️</div>
+      <h4>80S Ribosomes</h4>
+      <p><strong>Function:</strong> protein synthesis. Bigger than prokaryote ribosomes. Free-floating OR bound to rough ER.</p>
+    </div>
+  </div>
+
+  <h3>🧬 The protein-making assembly line</h3>
+  <p>This flow is <em>gold</em> for exam essays. Memorize it:</p>
+
+  <div class="diagram" style="background:linear-gradient(135deg, #cde3d5, #cfe3ee);">
+    <div style="font-size:15px;font-weight:600;line-height:2;">
+      🏛️ Nucleus <span style="color:var(--accent)">→</span>
+      ⚙️ Ribosome on Rough ER <span style="color:var(--accent)">→</span>
+      📦 Vesicle <span style="color:var(--accent)">→</span>
+      📮 Golgi <span style="color:var(--accent)">→</span>
+      📦 Vesicle <span style="color:var(--accent)">→</span>
+      🛡️ Plasma membrane <span style="color:var(--accent)">→</span>
+      🌍 Out!
+    </div>
+    <div class="diagram-caption">The path a secreted protein takes from DNA instructions to leaving the cell</div>
+  </div>
+
+  <div class="callout callout-video">
+    <h4>🎥 See it in motion</h4>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=amoeba+sisters+organelles" target="_blank">Amoeba Sisters — Organelles</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=inner+life+of+the+cell+harvard" target="_blank">"The Inner Life of the Cell" (Harvard animation — stunning)</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=protein+synthesis+animation" target="_blank">Protein synthesis animation</a>
+  </div>
+</section>
+
+<!-- ================ FUNCTIONS OF LIFE ================ -->
+<section id="life-functions">
+  <span class="section-tag">A2.2.7</span>
+  <h2 class="section-title">Functions of life 🌱</h2>
+  <p class="section-sub">Unicellular organisms (like <em>Paramecium</em>) do ALL 8 of these in one single cell.</p>
+
+  <div class="mnemonic">
+    <div style="color:var(--muted);font-size:14px;">Say hi to</div>
+    <div class="letters">Mr. H. GREN</div>
+    <div style="color:var(--muted);">Metabolism · Response · Homeostasis · Growth · Reproduction · Excretion · Nutrition (plus Movement)</div>
+  </div>
+
+  <table>
+    <tr><th>Function</th><th>Meaning</th></tr>
+    <tr><td><strong>Metabolism</strong></td><td>All the enzyme reactions in the cell (e.g. respiration)</td></tr>
+    <tr><td><strong>Response</strong></td><td>Detecting & reacting to stimuli</td></tr>
+    <tr><td><strong>Homeostasis</strong></td><td>Keeping internal conditions stable (pH, water)</td></tr>
+    <tr><td><strong>Movement</strong></td><td>Small-scale (organelles) or large (whole organism)</td></tr>
+    <tr><td><strong>Growth</strong></td><td>Getting bigger or changing shape</td></tr>
+    <tr><td><strong>Reproduction</strong></td><td>Making offspring (sexually or asexually)</td></tr>
+    <tr><td><strong>Excretion</strong></td><td>Removing metabolic waste</td></tr>
+    <tr><td><strong>Nutrition</strong></td><td>Getting energy — photosynthesize or absorb food</td></tr>
+  </table>
+</section>
+
+<!-- ================ COMPARING KINGDOMS ================ -->
+<section id="comparing">
+  <span class="section-tag">A2.2.8</span>
+  <h2 class="section-title">Animal vs. plant vs. fungi 🐘🌳🍄</h2>
+  <p class="section-sub">All eukaryotes, but with three distinct twists.</p>
+
+  <table>
+    <tr>
+      <th></th>
+      <th>Animal 🐘</th>
+      <th>Fungi 🍄</th>
+      <th>Plant 🌳</th>
+    </tr>
+    <tr>
+      <td><strong>Cell wall</strong></td>
+      <td>❌ None</td>
+      <td>✅ Made of <em>chitin</em></td>
+      <td>✅ Made of <em>cellulose</em></td>
+    </tr>
+    <tr>
+      <td><strong>Vacuoles</strong></td>
+      <td>Small, temporary</td>
+      <td>Large central (support)</td>
+      <td>Large central (support)</td>
+    </tr>
+    <tr>
+      <td><strong>Chloroplasts</strong></td>
+      <td>❌ None</td>
+      <td>❌ None</td>
+      <td>✅ Yes — photosynthesis!</td>
+    </tr>
+    <tr>
+      <td><strong>Centrioles, cilia, flagella</strong></td>
+      <td>✅ Yes</td>
+      <td>❌ Usually not (except some sex cells)</td>
+      <td>❌ Usually not (except some sex cells)</td>
+    </tr>
+  </table>
+
+  <div class="callout callout-tip">
+    <h4>🧠 Remember it as:</h4>
+    <p><strong>Plants</strong> = cellulose wall + chloroplasts + big vacuole. <strong>Fungi</strong> = chitin wall + big vacuole, no chloroplasts. <strong>Animals</strong> = no wall + moving parts (centrioles/cilia).</p>
+  </div>
+</section>
+
+<!-- ================ ATYPICAL ================ -->
+<section id="atypical">
+  <span class="section-tag">A2.2.9</span>
+  <h2 class="section-title">The weird cells 🎪</h2>
+  <p class="section-sub">Most cells have exactly one nucleus. These four break that rule for good reasons.</p>
+
+  <table>
+    <tr><th>Cell type</th><th>Nuclei</th><th>Why?</th></tr>
+    <tr>
+      <td><strong>Red blood cell</strong> 🩸</td>
+      <td>Zero</td>
+      <td>Too big! Nucleus (~10 μm) wouldn't fit through capillaries (~8 μm). Dumps it to squeeze through.</td>
+    </tr>
+    <tr>
+      <td><strong>Aseptate fungal hyphae</strong> 🍄</td>
+      <td>Many</td>
+      <td>Cell is super long — one nucleus can't control it all.</td>
+    </tr>
+    <tr>
+      <td><strong>Skeletal muscle fiber</strong> 💪</td>
+      <td>Many</td>
+      <td>Super long, needs multiple control centers.</td>
+    </tr>
+    <tr>
+      <td><strong>Phloem sieve tube element</strong> 🌱</td>
+      <td>Zero</td>
+      <td>Needs a hollow tube for sap to flow — nucleus removed to make space.</td>
+    </tr>
+  </table>
+</section>
+
+<!-- ================ MEMBRANE STRUCTURE ================ -->
+<section id="membrane-structure">
+  <span class="section-tag">B2.1.1 – B2.1.4, B2.1.9, B2.1.10</span>
+  <h2 class="section-title">Membrane structure 🧱</h2>
+  <p class="section-sub">Now switching topics: the FLUID MOSAIC MODEL. A wobbly sandwich full of proteins.</p>
+
+  <h3>Phospholipids — the bricks</h3>
+  <p>A phospholipid is <span class="term">amphipathic</span> — it has BOTH a polar and nonpolar end:</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="40" r="22" fill="#4a7ab8"/>
+      <text x="200" y="45" text-anchor="middle" fill="white" font-size="10" font-weight="bold">HEAD</text>
+      <text x="270" y="45" font-size="12" fill="#4a7ab8">💧 hydrophilic (loves water)</text>
+      <line x1="192" y1="60" x2="185" y2="150" stroke="#d4a24c" stroke-width="4"/>
+      <line x1="208" y1="60" x2="215" y2="150" stroke="#d4a24c" stroke-width="4"/>
+      <text x="230" y="120" font-size="12" fill="#d4a24c">🚫 hydrophobic (hates water)</text>
+      <text x="150" y="150" font-size="10" fill="#666">tails</text>
+    </svg>
+    <div class="diagram-caption">One phospholipid = polar head + 2 nonpolar fatty acid tails</div>
+  </div>
+
+  <p>When you drop them in water, they self-assemble into a <strong>bilayer</strong> — heads face out (toward water), tails hide in the middle.</p>
+
+  <h3>The fluid mosaic model 🎨</h3>
+  <p>The membrane is <em>fluid</em> (things drift around like a liquid) and <em>mosaic</em> (a mix of different molecules).</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+      <!-- top layer -->
+      <g>
+        <circle cx="30" cy="50" r="10" fill="#4a7ab8"/><line x1="30" y1="60" x2="30" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="55" cy="50" r="10" fill="#4a7ab8"/><line x1="55" y1="60" x2="55" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="80" cy="50" r="10" fill="#4a7ab8"/><line x1="80" y1="60" x2="80" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <!-- integral protein -->
+        <rect x="100" y="30" width="30" height="100" rx="5" fill="#6b8f5c"/>
+        <circle cx="145" cy="50" r="10" fill="#4a7ab8"/><line x1="145" y1="60" x2="145" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="170" cy="50" r="10" fill="#4a7ab8"/><line x1="170" y1="60" x2="170" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <!-- glycoprotein -->
+        <ellipse cx="200" cy="55" rx="15" ry="12" fill="#8a5a3a"/>
+        <line x1="200" y1="65" x2="200" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <path d="M 195 40 L 195 25 M 200 40 L 200 20 M 205 40 L 205 25" stroke="#6b8f5c" stroke-width="2"/>
+        <circle cx="195" cy="25" r="3" fill="#6b8f5c"/>
+        <circle cx="200" cy="20" r="3" fill="#6b8f5c"/>
+        <circle cx="205" cy="25" r="3" fill="#6b8f5c"/>
+        <!-- continue -->
+        <circle cx="225" cy="50" r="10" fill="#4a7ab8"/><line x1="225" y1="60" x2="225" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="250" cy="50" r="10" fill="#4a7ab8"/><line x1="250" y1="60" x2="250" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <!-- cholesterol -->
+        <ellipse cx="275" cy="80" rx="8" ry="18" fill="#d4a24c" opacity="0.8"/>
+        <circle cx="300" cy="50" r="10" fill="#4a7ab8"/><line x1="300" y1="60" x2="300" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="325" cy="50" r="10" fill="#4a7ab8"/><line x1="325" y1="60" x2="325" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <!-- channel -->
+        <rect x="350" y="30" width="30" height="100" rx="5" fill="#6b8f5c"/>
+        <rect x="360" y="30" width="10" height="100" fill="white"/>
+        <circle cx="400" cy="50" r="10" fill="#4a7ab8"/><line x1="400" y1="60" x2="400" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="425" cy="50" r="10" fill="#4a7ab8"/><line x1="425" y1="60" x2="425" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="450" cy="50" r="10" fill="#4a7ab8"/><line x1="450" y1="60" x2="450" y2="110" stroke="#d4a24c" stroke-width="3"/>
+      </g>
+      <!-- bottom layer -->
+      <g>
+        <circle cx="30" cy="170" r="10" fill="#4a7ab8"/><line x1="30" y1="160" x2="30" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="55" cy="170" r="10" fill="#4a7ab8"/><line x1="55" y1="160" x2="55" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="80" cy="170" r="10" fill="#4a7ab8"/><line x1="80" y1="160" x2="80" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="145" cy="170" r="10" fill="#4a7ab8"/><line x1="145" y1="160" x2="145" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="170" cy="170" r="10" fill="#4a7ab8"/><line x1="170" y1="160" x2="170" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="225" cy="170" r="10" fill="#4a7ab8"/><line x1="225" y1="160" x2="225" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="250" cy="170" r="10" fill="#4a7ab8"/><line x1="250" y1="160" x2="250" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <!-- peripheral protein -->
+        <ellipse cx="270" cy="185" rx="20" ry="10" fill="#c76a4a"/>
+        <circle cx="300" cy="170" r="10" fill="#4a7ab8"/><line x1="300" y1="160" x2="300" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="325" cy="170" r="10" fill="#4a7ab8"/><line x1="325" y1="160" x2="325" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="400" cy="170" r="10" fill="#4a7ab8"/><line x1="400" y1="160" x2="400" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="425" cy="170" r="10" fill="#4a7ab8"/><line x1="425" y1="160" x2="425" y2="110" stroke="#d4a24c" stroke-width="3"/>
+        <circle cx="450" cy="170" r="10" fill="#4a7ab8"/><line x1="450" y1="160" x2="450" y2="110" stroke="#d4a24c" stroke-width="3"/>
+      </g>
+    </svg>
+    <div class="diagram-caption">The fluid mosaic — you should be able to draw this. Include: phospholipids, integral & peripheral proteins, cholesterol, glycoprotein.</div>
+  </div>
+
+  <h3>Membrane proteins — remember "CRATER"</h3>
+  <div class="mnemonic">
+    <div class="letters">CRATER</div>
+    <div style="font-size:15px;color:var(--muted);line-height:1.8;">
+      <strong>C</strong>onnect (intercellular joinings)<br>
+      <strong>R</strong>ecognize (cell-cell recognition)<br>
+      <strong>A</strong>nchor (attachment/anchorage)<br>
+      <strong>T</strong>ransport (active or passive)<br>
+      <strong>E</strong>nzymes (catalyze reactions)<br>
+      <strong>R</strong>eceptors (signal transduction)
+    </div>
+  </div>
+
+  <h3>Integral vs. peripheral</h3>
+  <div class="two-col">
+    <div class="callout">
+      <h4>Integral proteins</h4>
+      <p>Embedded <strong>in</strong> the bilayer — often go all the way through. Transport channels, pumps, receptors.</p>
+    </div>
+    <div class="callout callout-tip">
+      <h4>Peripheral proteins</h4>
+      <p>Attached to the <strong>surface</strong> only. Support & signaling roles.</p>
+    </div>
+  </div>
+
+  <h3>Glycoproteins & glycolipids 🎗️</h3>
+  <p>These are proteins/lipids with sugar chains sticking OUT of the cell. They act as <strong>ID tags</strong> — your immune system reads them to tell "self" from "invader." Blood types (A, B, O) work this way!</p>
+</section>
+
+<!-- ================ TRANSPORT ================ -->
+<section id="transport">
+  <span class="section-tag">B2.1.2, B2.1.3, B2.1.6, B2.1.7, B2.1.8</span>
+  <h2 class="section-title">Transport across membranes 🚦</h2>
+  <p class="section-sub">Four ways stuff crosses the membrane. Two need energy, two don't.</p>
+
+  <h3>First: who can just… walk through?</h3>
+  <p>The middle of the membrane is oily (nonpolar). So:</p>
+  <ul class="pretty">
+    <li>✅ <strong>Small AND nonpolar</strong> = passes freely (O₂, CO₂)</li>
+    <li>❌ <strong>Large, polar, or charged</strong> = blocked (glucose, Na⁺, Cl⁻)</li>
+  </ul>
+
+  <h3>Method 1: Simple diffusion</h3>
+  <div class="callout">
+    <p><strong>Simple diffusion</strong> = passive movement from high → low concentration, straight through the lipid bilayer. Only for small nonpolar molecules like <strong>O₂ and CO₂</strong>. No protein, no energy.</p>
+  </div>
+
+  <h3>Method 2: Facilitated diffusion (channel proteins)</h3>
+  <div class="callout">
+    <p><strong>Facilitated diffusion</strong> = passive movement from high → low concentration, but <em>through a channel protein</em>. Used by ions and glucose. No energy needed, but the protein makes it selective.</p>
+    <p style="margin-top:8px;font-size:14px;"><strong>Gated channels</strong> can open/close in response to voltage, light, or a chemical binding. This is how nerves work.</p>
+  </div>
+
+  <h3>Method 3: Active transport (pump proteins)</h3>
+  <div class="callout callout-warn">
+    <p><strong>Active transport</strong> = pushing molecules from LOW → HIGH concentration (uphill!) using a pump protein powered by <strong>ATP</strong>.</p>
+  </div>
+
+  <div class="diagram">
+    <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 20 90 L 380 20" stroke="#666" stroke-width="2"/>
+      <circle cx="80" cy="80" r="12" fill="#4a7ab8"/>
+      <text x="60" y="115" font-size="11">low conc.</text>
+      <text x="130" y="65" font-size="12" fill="#c76a4a">⚡ ATP</text>
+      <path d="M 130 75 L 155 60" stroke="#c76a4a" stroke-width="2" marker-end="url(#arr)"/>
+      <circle cx="200" cy="55" r="12" fill="#4a7ab8"/>
+      <circle cx="320" cy="30" r="12" fill="#4a7ab8"/>
+      <text x="290" y="15" font-size="11">high conc.</text>
+      <defs>
+        <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#c76a4a"/>
+        </marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Pushing a ball uphill — requires energy!</div>
+  </div>
+
+  <h3>Method 4: Osmosis</h3>
+  <p>Special enough to get its own section 👇</p>
+
+  <div class="callout callout-tip">
+    <h4>🧠 Quick summary</h4>
+    <table style="margin:0;">
+      <tr><th>Method</th><th>Direction</th><th>Protein?</th><th>Energy?</th></tr>
+      <tr><td>Simple diffusion</td><td>Down gradient</td><td>No</td><td>No</td></tr>
+      <tr><td>Facilitated diffusion</td><td>Down gradient</td><td>Yes (channel)</td><td>No</td></tr>
+      <tr><td>Osmosis</td><td>Water only, down its own gradient</td><td>Yes (aquaporin)</td><td>No</td></tr>
+      <tr><td>Active transport</td><td><strong>Up</strong> gradient</td><td>Yes (pump)</td><td>Yes (ATP)</td></tr>
+    </table>
+  </div>
+
+  <div class="callout callout-video">
+    <h4>🎥 Watch these</h4>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=amoeba+sisters+cell+transport" target="_blank">Amoeba Sisters — Cell Transport</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=active+transport+passive+transport+animation" target="_blank">Active vs. passive transport animation</a>
+  </div>
+</section>
+
+<!-- ================ OSMOSIS ================ -->
+<section id="osmosis">
+  <span class="section-tag">B2.1.5</span>
+  <h2 class="section-title">Osmosis 💧</h2>
+  <p class="section-sub">Everyone gets confused. Here's the fix.</p>
+
+  <div class="callout">
+    <p><strong>Osmosis</strong> = the passive movement of <strong>water</strong> through a membrane, from an area of <em>low solute</em> to <em>high solute</em> concentration. Water uses a channel protein called an <strong>aquaporin</strong> to get through.</p>
+  </div>
+
+  <div class="callout callout-tip">
+    <h4>💡 The magic phrase</h4>
+    <p style="font-size:22px;font-family:'Fraunces',serif;text-align:center;color:var(--accent);"><strong>Solute sucks. 💥</strong></p>
+    <p>The side with <em>more solute</em> pulls water toward it. Think of it as a tug-of-war — whoever has more solute wins the water.</p>
+  </div>
+
+  <h3>The tonicity vocabulary</h3>
+  <table>
+    <tr><th>Term</th><th>Meaning</th><th>What happens to a cell placed in it?</th></tr>
+    <tr>
+      <td><strong>Hypertonic</strong></td>
+      <td>Stronger solution (more solute outside)</td>
+      <td>Water leaves cell → cell <strong>shrinks</strong> (crenation / plasmolysis)</td>
+    </tr>
+    <tr>
+      <td><strong>Hypotonic</strong></td>
+      <td>Weaker solution (less solute outside)</td>
+      <td>Water enters cell → cell <strong>swells</strong> or pops (lysis)</td>
+    </tr>
+    <tr>
+      <td><strong>Isotonic</strong></td>
+      <td>Same concentration on both sides</td>
+      <td>No net movement — cell stays normal</td>
+    </tr>
+  </table>
+
+  <div class="callout callout-warn">
+    <h4>⚠️ Watch out — mixing up hyper and hypo</h4>
+    <p><strong>Hyper</strong> = high (hypertension = high pressure). Hypertonic = HIGH solute. Water leaves the cell.<br>
+    <strong>Hypo</strong> = low. Hypotonic = LOW solute. Water enters the cell.</p>
+  </div>
+
+  <div class="callout callout-video">
+    <a class="video-link" href="https://www.youtube.com/results?search_query=amoeba+sisters+osmosis" target="_blank">Amoeba Sisters — Osmosis</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=hypertonic+hypotonic+isotonic+cell" target="_blank">Tonicity explained visually</a>
+  </div>
+</section>
+
+<!-- ================ COMPARTMENTALIZATION ================ -->
+<section id="compartments">
+  <span class="section-tag">B2.2.1 – B2.2.3</span>
+  <h2 class="section-title">Compartmentalization 🏘️</h2>
+  <p class="section-sub">Why bother having all those organelles? Here's the answer.</p>
+
+  <h3>Advantages of having compartments</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="emoji">⚡</div>
+      <h4>Efficient metabolism</h4>
+      <p>Enzymes and substrates can be concentrated together in one small space.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🧪</div>
+      <h4>Local conditions</h4>
+      <p>Different pH, ion concentrations, etc. can be maintained in different organelles.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">☠️</div>
+      <h4>Toxic isolation</h4>
+      <p>Dangerous things (digestive enzymes in lysosomes) are locked away so they don't destroy the cell.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🔀</div>
+      <h4>Flexibility</h4>
+      <p>Cell can adjust numbers of organelles based on need (e.g. more mitochondria = more energy).</p>
+    </div>
+  </div>
+
+  <h3>Why separate the nucleus from the cytoplasm?</h3>
+  <p>Because it lets eukaryotes do <span class="term">post-transcriptional modification</span> — the mRNA can be edited AFTER being copied from DNA but BEFORE it reaches ribosomes. Prokaryotes can't do this; their ribosomes start translating while mRNA is still being made.</p>
+
+  <div class="diagram" style="background:linear-gradient(135deg, #e0d7ee, #cfe3ee);">
+    <div style="font-size:14px;font-weight:600;">DNA <span style="color:var(--accent)">→ transcription →</span> mRNA <span style="color:var(--accent)">→ processing →</span> edited mRNA <span style="color:var(--accent)">→ translation →</span> Protein</div>
+  </div>
+</section>
+
+<!-- ================ STEM CELLS ================ -->
+<section id="stem-cells">
+  <span class="section-tag">B2.3.1 – B2.3.4</span>
+  <h2 class="section-title">Stem cells & differentiation 🌱</h2>
+  <p class="section-sub">How one fertilized egg becomes 200+ cell types.</p>
+
+  <h3>What is a stem cell?</h3>
+  <p>A cell with two superpowers:</p>
+  <ol class="pretty">
+    <li>Can <strong>divide endlessly</strong> to make more copies of itself.</li>
+    <li>Can <strong>differentiate</strong> into specialized cell types.</li>
+  </ol>
+
+  <h3>The story</h3>
+  <ol class="pretty">
+    <li>Sperm + egg = zygote (a single stem cell)</li>
+    <li>Zygote divides many times → <strong>blastocyst</strong> (hollow ball with inner cell mass)</li>
+    <li>Stem cells detect <span class="term">morphogens</span> — signal molecules whose concentration tells them what to become</li>
+    <li>They <strong>differentiate</strong> by turning some genes on and others off</li>
+    <li>Result: muscle cell, neuron, red blood cell, skin cell, etc.</li>
+  </ol>
+
+  <div class="callout callout-tip">
+    <h4>🎯 Morphogens</h4>
+    <p>These are chemicals released from a <strong>source cell</strong>. Cells CLOSE to the source detect high concentrations; cells FAR from the source detect low concentrations. So the same signal creates different tissues in a gradient across the embryo!</p>
+  </div>
+
+  <h3>Types of stem cells — the potency ladder</h3>
+  <table>
+    <tr><th>Type</th><th>Can become…</th><th>Example</th></tr>
+    <tr>
+      <td><strong>Totipotent</strong></td>
+      <td><em>Anything</em> — including placenta cells</td>
+      <td>Zygote (days 0–4)</td>
+    </tr>
+    <tr>
+      <td><strong>Pluripotent</strong></td>
+      <td>Any body cell (but NOT placenta)</td>
+      <td>Inner cell mass of blastocyst</td>
+    </tr>
+    <tr>
+      <td><strong>Multipotent</strong></td>
+      <td>A few related cell types</td>
+      <td>Bone marrow → any blood cell</td>
+    </tr>
+    <tr>
+      <td><strong>Unipotent</strong></td>
+      <td>One cell type only</td>
+      <td>Skin (epidermal) stem cells</td>
+    </tr>
+  </table>
+
+  <h3>Stem cell niches in adults</h3>
+  <p>Even adults have some stem cells left over. They live in special microenvironments called <strong>niches</strong>, where <em>niche cells</em> keep them in the right conditions to divide & differentiate when needed:</p>
+  <div class="two-col">
+    <div class="callout">
+      <h4>🦴 Bone marrow niche</h4>
+      <p><strong>Hematopoietic stem cells (HSCs)</strong> make new blood cells (red, white, platelets). This is <em>hematopoiesis</em>.</p>
+    </div>
+    <div class="callout callout-tip">
+      <h4>💇 Hair follicle niche</h4>
+      <p>Located in a <strong>bulge</strong> in the follicle. Multipotent — can regenerate skin & hair tissues. Huge therapeutic potential.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-video">
+    <a class="video-link" href="https://www.youtube.com/results?search_query=stem+cells+explained" target="_blank">Stem cells explained</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=morphogens+embryonic+development" target="_blank">Morphogens & development</a>
+  </div>
+</section>
+
+<!-- ================ SA:VOL ================ -->
+<section id="sa-vol">
+  <span class="section-tag">B2.3.5, B2.3.6</span>
+  <h2 class="section-title">Surface area to volume ratio 📐</h2>
+  <p class="section-sub">The single reason cells are so small.</p>
+
+  <div class="callout">
+    <p>Everything the cell needs (O₂, glucose) has to <strong>cross the membrane</strong>. So <strong>surface area</strong> = how fast stuff can enter/leave.</p>
+    <p>Meanwhile, <strong>volume</strong> = how much stuff the cell needs. Bigger cell = more demand.</p>
+  </div>
+
+  <h3>The problem</h3>
+  <p>When a cell gets bigger, volume grows <em>faster</em> than surface area. Imagine a cube:</p>
+  <table>
+    <tr><th>Side</th><th>SA (6s²)</th><th>Vol (s³)</th><th>SA:Vol</th></tr>
+    <tr><td>1</td><td>6</td><td>1</td><td><strong>6 : 1</strong> 😄</td></tr>
+    <tr><td>2</td><td>24</td><td>8</td><td>3 : 1</td></tr>
+    <tr><td>4</td><td>96</td><td>64</td><td>1.5 : 1</td></tr>
+    <tr><td>10</td><td>600</td><td>1000</td><td><strong>0.6 : 1</strong> 😰</td></tr>
+  </table>
+
+  <p>See? A cell that gets too big literally can't absorb enough nutrients to feed itself. This is why cells stay small — and if they need more area, they either:</p>
+  <ul class="pretty">
+    <li>Stay small and divide</li>
+    <li>Grow special shapes (long & thin like neurons, or covered in <strong>microvilli</strong> like intestinal cells)</li>
+  </ul>
+
+  <div class="callout callout-tip">
+    <h4>🧠 One-line takeaway</h4>
+    <p><strong>Big cells starve.</strong> That's why we're multicellular, and why intestinal cells have those little finger-like microvilli.</p>
+  </div>
+</section>
+
+<!-- ================ EXAM TIPS ================ -->
+<section id="exam-tips">
+  <span class="section-tag">Final prep</span>
+  <h2 class="section-title">Exam-day tips 🎯</h2>
+
+  <ul class="pretty">
+    <li><strong>Draw big.</strong> Small drawings lose marks for clarity. Fill the space.</li>
+    <li><strong>Label with lines that touch the structure.</strong> A label line ending in empty space = no mark.</li>
+    <li><strong>Give function AND structure.</strong> If asked to "annotate," you MUST include what the structure does.</li>
+    <li><strong>Use IB command terms carefully.</strong> "Outline" = short list. "Explain" = give reasons. "Compare" = similarities AND differences.</li>
+    <li><strong>Check units in magnification questions.</strong> Convert everything to the same unit BEFORE dividing.</li>
+    <li><strong>Watch for the trick word "all."</strong> "All cells have ribosomes" ✅. "All cells have mitochondria" ❌ (prokaryotes don't).</li>
+    <li><strong>Memorize these lists exactly:</strong> the 4 features common to all cells, MR H GREN, CRATER, the potency ladder.</li>
+  </ul>
+
+  <div class="callout callout-warn">
+    <h4>⚠️ Classic exam traps</h4>
+    <ul style="margin-top:8px;">
+      <li>Confusing hyper/hypotonic → remember "solute sucks"</li>
+      <li>Saying prokaryotes have a nucleus (they don't — just a nucleoid REGION)</li>
+      <li>Forgetting active transport needs ATP</li>
+      <li>Writing "diffuses through channel protein" for O₂ — that's simple diffusion, no protein needed!</li>
+      <li>Confusing rough ER (proteins) with smooth ER (lipids)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================ QUIZ ================ -->
+<section id="quiz">
+  <span class="section-tag">Test yourself</span>
+  <h2 class="section-title">Self-quiz 🎓</h2>
+  <p class="section-sub">Click each question to reveal the answer. No cheating!</p>
+
+  <div class="quiz">
+    <details>
+      <summary>1. What are the three statements of cell theory?</summary>
+      <div class="answer">
+        <strong>Answer:</strong> (1) All living things are made of cells. (2) The cell is the basic unit of life. (3) All cells come from pre-existing cells.
+      </div>
+    </details>
+    <details>
+      <summary>2. Name the four features common to ALL cells.</summary>
+      <div class="answer">
+        <strong>Answer:</strong> DNA, cytoplasm, ribosomes, plasma membrane.
+      </div>
+    </details>
+    <details>
+      <summary>3. Formula for magnification?</summary>
+      <div class="answer">
+        <strong>Answer:</strong> Magnification = drawing size ÷ actual size. Always convert units first!
+      </div>
+    </details>
+    <details>
+      <summary>4. Give one advantage and one disadvantage of the electron microscope vs. light microscope.</summary>
+      <div class="answer">
+        <strong>Advantage:</strong> Much higher magnification & resolution. <strong>Disadvantage:</strong> Sample must be dead; images are only in black & white; very expensive.
+      </div>
+    </details>
+    <details>
+      <summary>5. Prokaryote DNA vs. eukaryote DNA — three differences?</summary>
+      <div class="answer">
+        <strong>Prokaryote:</strong> naked (no histones), circular/looped, in nucleoid region.<br>
+        <strong>Eukaryote:</strong> bound to histones, linear, inside nucleus.
+      </div>
+    </details>
+    <details>
+      <summary>6. What does the rough ER do and how is it different from smooth ER?</summary>
+      <div class="answer">
+        <strong>Rough ER:</strong> covered in ribosomes; makes proteins for export.<br>
+        <strong>Smooth ER:</strong> no ribosomes; makes lipids and detoxifies drugs.
+      </div>
+    </details>
+    <details>
+      <summary>7. What are the 8 functions of life (MR H GREN)?</summary>
+      <div class="answer">
+        <strong>M</strong>etabolism, <strong>R</strong>esponse, <strong>H</strong>omeostasis, <strong>G</strong>rowth, <strong>R</strong>eproduction, <strong>E</strong>xcretion, <strong>N</strong>utrition — plus Movement.
+      </div>
+    </details>
+    <details>
+      <summary>8. What is the cell wall of plants made of? Fungi?</summary>
+      <div class="answer">
+        <strong>Plants:</strong> cellulose. <strong>Fungi:</strong> chitin.
+      </div>
+    </details>
+    <details>
+      <summary>9. Why do red blood cells not have a nucleus?</summary>
+      <div class="answer">
+        <strong>Answer:</strong> A nucleus (~10 μm) is too big to fit through capillaries (~8 μm). RBCs eject it during development so they can squeeze through.
+      </div>
+    </details>
+    <details>
+      <summary>10. What does "amphipathic" mean and why is it important?</summary>
+      <div class="answer">
+        <strong>Answer:</strong> Having both hydrophilic (water-loving) and hydrophobic (water-hating) parts. Phospholipids are amphipathic — that's why they spontaneously form bilayers in water.
+      </div>
+    </details>
+    <details>
+      <summary>11. Name 4 kinds of molecules that CAN'T cross the membrane by simple diffusion, and why.</summary>
+      <div class="answer">
+        <strong>Answer:</strong> Large molecules (like glucose), polar molecules (like water — needs aquaporin), and charged ions (Na⁺, Cl⁻). They can't get through the nonpolar hydrocarbon core.
+      </div>
+    </details>
+    <details>
+      <summary>12. Give the CRATER functions of membrane proteins.</summary>
+      <div class="answer">
+        <strong>C</strong>onnect · <strong>R</strong>ecognize · <strong>A</strong>nchor · <strong>T</strong>ransport · <strong>E</strong>nzymes · <strong>R</strong>eceptors.
+      </div>
+    </details>
+    <details>
+      <summary>13. What's the difference between facilitated diffusion and active transport?</summary>
+      <div class="answer">
+        <strong>Facilitated diffusion:</strong> passive, moves DOWN concentration gradient through a channel protein, no ATP.<br>
+        <strong>Active transport:</strong> moves UP concentration gradient through a pump protein, requires ATP.
+      </div>
+    </details>
+    <details>
+      <summary>14. Define osmosis.</summary>
+      <div class="answer">
+        <strong>Answer:</strong> The passive movement of water molecules through a selectively permeable membrane, from an area of low solute concentration to an area of high solute concentration (via aquaporins).
+      </div>
+    </details>
+    <details>
+      <summary>15. If a red blood cell is placed in pure water, what happens?</summary>
+      <div class="answer">
+        <strong>Answer:</strong> Pure water is <em>hypotonic</em> to the cell. Water rushes IN by osmosis. RBC swells and eventually bursts (lysis).
+      </div>
+    </details>
+    <details>
+      <summary>16. Give 3 advantages of compartmentalization in eukaryotic cells.</summary>
+      <div class="answer">
+        <strong>Answer:</strong> (1) Enzymes and substrates concentrated → more efficient. (2) Local conditions like pH can be optimized. (3) Toxic/damaging substances (e.g. digestive enzymes) can be isolated in specific organelles (lysosomes).
+      </div>
+    </details>
+    <details>
+      <summary>17. What's the difference between totipotent, pluripotent, and multipotent stem cells?</summary>
+      <div class="answer">
+        <strong>Totipotent:</strong> can become ANY cell, including placenta. Only in very early embryo.<br>
+        <strong>Pluripotent:</strong> can become any body cell (not placenta). Found in inner cell mass of blastocyst.<br>
+        <strong>Multipotent:</strong> can become a few related types. Bone marrow (blood cells).
+      </div>
+    </details>
+    <details>
+      <summary>18. Why do cells stay small?</summary>
+      <div class="answer">
+        <strong>Answer:</strong> As a cell gets bigger, volume increases faster than surface area. Eventually SA:Vol becomes too small for enough materials to enter/leave. So cells either stay small, divide, or develop shapes like microvilli that increase surface area.
+      </div>
+    </details>
+    <details>
+      <summary>19. What are morphogens and how do they work?</summary>
+      <div class="answer">
+        <strong>Answer:</strong> Signaling chemicals secreted by source cells. They form a concentration gradient — nearby cells detect high concentrations, distant cells detect low. Different concentrations trigger different genes to switch on, causing cells to differentiate into different tissue types.
+      </div>
+    </details>
+    <details>
+      <summary>20. Name two stem cell niches in adult humans and what they do.</summary>
+      <div class="answer">
+        <strong>Bone marrow:</strong> hematopoietic stem cells → all types of blood cells.<br>
+        <strong>Hair follicle bulge:</strong> multipotent stem cells → regenerate skin and hair tissues.
+      </div>
+    </details>
+  </div>
+</section>
+
+<div class="footer">
+  <p>Made for you <span class="heart">♡</span> — good luck on your test!</p>
+  <p style="margin-top:10px;font-size:12px;">Pro tip: bookmark this page. Re-read once tonight, once tomorrow morning. Sleep is when memory consolidates. 🌙</p>
+</div>
+
+</div>
+
+</body>
+</html>
