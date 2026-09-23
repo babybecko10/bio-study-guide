@@ -455,13 +455,26 @@
     font-size: 8px;
     letter-spacing: 3px;
   }
+
+  .sl-badge {
+    display: inline-block;
+    background: var(--sage);
+    color: var(--accent3);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
 </style>
 </head>
 <body>
 
 <div class="hero">
   <h1>Cells, Membranes & Life ✨</h1>
-  <p class="subtitle">Your friendly, no-panic guide to IB Biology SL — A2.2, B2.1, B2.2, and B2.3. Made so future-you thanks past-you.</p>
+  <p class="subtitle">Your friendly, no-panic guide to IB Biology SL — A2.2, B2.1, B2.2, and B2.3. Every SL syllabus point checked off. Made so future-you thanks past-you.</p>
   <div>
     <span class="chip">🔬 Cell Structure</span>
     <span class="chip">💧 Membrane Transport</span>
@@ -476,21 +489,31 @@
   <h2>📚 What we're covering</h2>
   <ol>
     <li><a href="#big-picture">The big picture (start here)</a></li>
-    <li><a href="#cell-theory">Cell theory & microscopy</a></li>
-    <li><a href="#common">What ALL cells have</a></li>
-    <li><a href="#prokaryotes">Prokaryotic cells</a></li>
-    <li><a href="#eukaryotes">Eukaryotic cells & organelles</a></li>
-    <li><a href="#life-functions">Functions of life</a></li>
-    <li><a href="#comparing">Animal vs. plant vs. fungi</a></li>
-    <li><a href="#atypical">Weird cells (atypical)</a></li>
-    <li><a href="#membrane-structure">Membrane structure</a></li>
-    <li><a href="#transport">Transport across membranes</a></li>
-    <li><a href="#osmosis">Osmosis (the special one)</a></li>
-    <li><a href="#compartments">Compartmentalization</a></li>
-    <li><a href="#stem-cells">Stem cells & differentiation</a></li>
-    <li><a href="#sa-vol">Surface area to volume</a></li>
+    <li><a href="#cell-theory">Cell theory (A2.2.1)</a></li>
+    <li><a href="#microscopy">Microscopy skills (A2.2.2)</a></li>
+    <li><a href="#microscopy-adv">Developments in microscopy (A2.2.3)</a></li>
+    <li><a href="#common">Structures common to all cells (A2.2.4)</a></li>
+    <li><a href="#prokaryotes">Prokaryotic cells (A2.2.5)</a></li>
+    <li><a href="#eukaryotes">Eukaryotic cells (A2.2.6)</a></li>
+    <li><a href="#life-functions">Functions of life (A2.2.7)</a></li>
+    <li><a href="#comparing">Animal vs. plant vs. fungi (A2.2.8)</a></li>
+    <li><a href="#atypical">Atypical cells (A2.2.9)</a></li>
+    <li><a href="#micrographs">Reading micrographs (A2.2.10 – A2.2.11)</a></li>
+    <li><a href="#membrane-structure">Fluid mosaic membrane (B2.1.1, 1.4, 1.9, 1.10)</a></li>
+    <li><a href="#barriers">Membrane as a barrier (B2.1.2)</a></li>
+    <li><a href="#simple-diff">Simple diffusion (B2.1.3)</a></li>
+    <li><a href="#osmosis">Osmosis & aquaporins (B2.1.5)</a></li>
+    <li><a href="#channels">Channel proteins (B2.1.6)</a></li>
+    <li><a href="#pumps">Pump proteins & active transport (B2.1.7)</a></li>
+    <li><a href="#selectivity">Selectivity in permeability (B2.1.8)</a></li>
+    <li><a href="#organelles">Organelles as subunits (B2.2.1)</a></li>
+    <li><a href="#nucleus-compart">Nucleus/cytoplasm separation (B2.2.2)</a></li>
+    <li><a href="#compartments">Advantages of compartmentalization (B2.2.3)</a></li>
+    <li><a href="#stem-cells">Differentiation & stem cells (B2.3.1 – B2.3.4)</a></li>
+    <li><a href="#cell-size">Cell size as specialization (B2.3.5)</a></li>
+    <li><a href="#sa-vol">Surface area to volume (B2.3.6)</a></li>
     <li><a href="#exam-tips">Exam-day tips</a></li>
-    <li><a href="#quiz">Self-quiz</a></li>
+    <li><a href="#quiz">Self-quiz (25 questions)</a></li>
   </ol>
 </div>
 
@@ -527,13 +550,13 @@
   </div>
 </section>
 
-<!-- ================ CELL THEORY & MICROSCOPY ================ -->
+<!-- ================ CELL THEORY ================ -->
 <section id="cell-theory">
-  <span class="section-tag">A2.2.1 – A2.2.3</span>
-  <h2 class="section-title">Cell theory & microscopy 🔬</h2>
-  <p class="section-sub">The rules everyone agrees on, and the tools that let us see the tiny stuff.</p>
+  <span class="section-tag">A2.2.1</span>
+  <h2 class="section-title">Cell theory 🧬</h2>
+  <p class="section-sub">Cells as the basic structural unit of all living organisms.</p>
 
-  <h3>The three rules of cell theory</h3>
+  <h3>The three statements of cell theory</h3>
   <ol class="pretty">
     <li><strong>All living things are made of cells.</strong></li>
     <li><strong>The cell is the basic unit of life.</strong></li>
@@ -541,81 +564,152 @@
   </ol>
 
   <div class="callout">
-    <h4>💡 NOS: Inductive vs. deductive reasoning</h4>
-    <p><strong>Inductive</strong> = many observations → general rule. ("Every cell I've seen has DNA... so all cells probably have DNA.")</p>
-    <p><strong>Deductive</strong> = general rule → specific prediction. ("All cells have DNA, so THIS newly-discovered animal has cells with DNA.")</p>
+    <h4>📖 "Theory" in daily vs. scientific language</h4>
+    <p>In everyday speech, "theory" means a guess ("I have a theory about who ate my sandwich"). In <strong>science</strong>, a theory is way stronger — it's a well-supported explanation backed by <em>huge</em> amounts of evidence. Cell theory isn't a hunch; it's confirmed by ~200 years of microscopy.</p>
   </div>
 
-  <h3>Calculating magnification 🧮</h3>
-  <p>This is one of the few actual math formulas in this whole unit. Memorize it:</p>
+  <h3>Inductive vs. deductive reasoning (NOS)</h3>
+  <div class="two-col">
+    <div class="callout callout-tip">
+      <h4>Inductive reasoning</h4>
+      <p>Many observations → general rule.</p>
+      <p><em>"Every organism I've looked at is made of cells → therefore ALL living things must be made of cells."</em></p>
+      <p>This is how cell theory was originally built.</p>
+    </div>
+    <div class="callout">
+      <h4>Deductive reasoning</h4>
+      <p>General rule → specific prediction.</p>
+      <p><em>"All living things are made of cells. This newly-discovered animal is alive → therefore it must be made of cells."</em></p>
+      <p>Uses the theory to predict.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================ MICROSCOPY SKILLS ================ -->
+<section id="microscopy">
+  <span class="section-tag">A2.2.2</span>
+  <h2 class="section-title">Microscopy skills 🔬</h2>
+  <p class="section-sub">Two calculations you MUST be able to do on demand.</p>
 
   <div class="mnemonic">
-    <div style="font-size:15px;color:var(--muted);">Magnification =</div>
-    <div class="letters">Drawing ÷ Actual</div>
-    <div style="font-size:14px;color:var(--muted);">(size of the image ÷ real size)</div>
+    <div style="font-size:15px;color:var(--muted);">The one formula</div>
+    <div class="letters">M = I ÷ A</div>
+    <div style="font-size:14px;color:var(--muted);">Magnification = Image size (drawing) ÷ Actual size</div>
   </div>
 
+  <h3>Calculation 1: Finding magnification</h3>
   <div class="callout callout-tip">
-    <h4>📏 Step-by-step</h4>
     <ol class="pretty">
       <li>Find the <strong>actual size</strong> from the scale bar (e.g. "50 μm").</li>
-      <li>Measure the <strong>drawing size</strong> with a ruler (e.g. scale bar is 20 mm).</li>
+      <li>Measure the <strong>drawing size</strong> with a ruler (e.g. scale bar is 20 mm long).</li>
       <li><strong>Convert units!</strong> Make them match. (20 mm = 20,000 μm)</li>
       <li>Divide: 20,000 ÷ 50 = <strong>×400 magnification</strong>.</li>
     </ol>
-    <p style="margin-top:12px;font-size:14px"><strong>Unit cheat-sheet:</strong> 1 mm = 1,000 μm = 1,000,000 nm</p>
+  </div>
+
+  <h3>Calculation 2: Finding actual size (reverse)</h3>
+  <div class="callout">
+    <p>If you know the magnification and the drawing size, rearrange:</p>
+    <p style="text-align:center;font-family:'Fraunces',serif;font-size:24px;color:var(--accent);"><strong>Actual size = Image size ÷ Magnification</strong></p>
+    <p><em>Example:</em> A cell is drawn 30 mm across at ×600 magnification. Actual size = 30 mm ÷ 600 = 0.05 mm = <strong>50 μm</strong>.</p>
+  </div>
+
+  <div class="callout callout-warn">
+    <h4>📏 Unit cheat-sheet — memorize this!</h4>
+    <p style="font-family:'Fraunces',serif;font-size:18px;text-align:center;">1 mm = 1,000 μm = 1,000,000 nm</p>
+    <p style="font-size:14px;">Always convert BOTH measurements to the same unit before dividing. This is where most marks are lost.</p>
+  </div>
+</section>
+
+<!-- ================ DEVELOPMENTS IN MICROSCOPY ================ -->
+<section id="microscopy-adv">
+  <span class="section-tag">A2.2.3</span>
+  <h2 class="section-title">Developments in microscopy 🔭</h2>
+  <p class="section-sub">How science invents better eyes.</p>
+
+  <h3>Resolution vs. magnification — know the difference!</h3>
+  <div class="two-col">
+    <div class="callout">
+      <h4>Magnification 🔍</h4>
+      <p>How much <strong>bigger</strong> the image appears compared to the real object. (A magnifying glass makes an ant look huge.)</p>
+    </div>
+    <div class="callout callout-tip">
+      <h4>Resolution 🎯</h4>
+      <p>The <strong>smallest distance</strong> between two things where you can still tell they're separate. Higher resolution = sharper detail. (You can zoom a blurry photo but not gain resolution!)</p>
+    </div>
+  </div>
+
+  <div class="callout callout-warn">
+    <h4>⚠️ Classic trap</h4>
+    <p>High magnification without resolution = a big, blurry mess. Electron microscopes win because they have <em>both</em> high magnification AND high resolution.</p>
   </div>
 
   <h3>Types of microscopes</h3>
-
   <table>
     <tr><th>Type</th><th>How it works</th><th>Pros & cons</th></tr>
     <tr>
       <td><strong>Light microscope</strong></td>
       <td>Uses visible light + glass lenses.</td>
-      <td>✅ Cheap, samples can be alive & in color.<br>❌ Low resolution (can't see anything smaller than ~200 nm).</td>
+      <td>✅ Cheap, samples can be alive & in color.<br>❌ Low resolution (~200 nm limit).</td>
     </tr>
     <tr>
       <td><strong>Electron microscope (EM)</strong></td>
-      <td>Fires electrons at the sample instead of light.</td>
-      <td>✅ Insanely high magnification & resolution.<br>❌ Expensive. Sample must be dead. Black & white only.</td>
-    </tr>
-    <tr>
-      <td><strong>Immunofluorescence</strong></td>
-      <td>Antibodies that glow are attached to specific cell parts.</td>
-      <td>✅ You can literally light up specific organelles in different colors.</td>
-    </tr>
-    <tr>
-      <td><strong>Cryogenic EM</strong></td>
-      <td>Freeze the sample, then EM it.</td>
-      <td>✅ Atoms hold still → you can image huge molecules like proteins & viruses.</td>
-    </tr>
-    <tr>
-      <td><strong>Freeze-fracture</strong></td>
-      <td>Freeze, then snap the sample open along the membrane.</td>
-      <td>✅ Lets us peek at proteins <em>inside</em> the membrane.</td>
+      <td>Fires electrons instead of light. Much shorter wavelength → much better resolution.</td>
+      <td>✅ Insanely high magnification & resolution — can see organelles clearly.<br>❌ Expensive. Sample must be dead. Black & white only.</td>
     </tr>
   </table>
 
+  <h3>Advanced light techniques</h3>
+
+  <h4>Fluorescent stains 💡</h4>
+  <p>Special dyes that glow under UV light. <strong>Benefit:</strong> lets you see specific structures in specific colors — perfect for spotting one type of protein or organelle.</p>
+
+  <h4>Immunofluorescence 🎨</h4>
+  <p><strong>Antibodies</strong> are attached to a fluorescent dye. Because antibodies are super specific, they only bind to ONE type of protein. Result: whatever protein you're studying lights up in the microscope — everything else stays dark.</p>
+
+  <div class="diagram" style="background:linear-gradient(135deg,#e0d7ee,#cfe3ee);">
+    <div style="font-size:14px;font-weight:600;line-height:2;">
+      Target protein 🎯 ← Antibody 🔗 ← Fluorescent dye ✨<br>
+      → Structure lights up under UV → you see it clearly!
+    </div>
+  </div>
+
+  <h3>Advanced electron techniques</h3>
+
+  <h4>Freeze-fracture ❄️</h4>
+  <ol class="pretty">
+    <li>Freeze the sample super fast.</li>
+    <li>Crack it open along the weakest layer — which is the <em>middle of the membrane</em>.</li>
+    <li>Coat with metal & image.</li>
+    <li><strong>Result:</strong> you literally see the proteins EMBEDDED in the membrane. This is how we know membranes have integral proteins scattered through them.</li>
+  </ol>
+
+  <h4>Cryogenic electron microscopy (Cryo-EM) 🧊</h4>
+  <ol class="pretty">
+    <li>Freeze the sample so cold that atoms stop wobbling.</li>
+    <li>Fire electrons at it.</li>
+    <li><strong>Result:</strong> you can image huge proteins & even viruses (like SARS-CoV-2!) at near-atomic detail.</li>
+  </ol>
+
   <div class="callout callout-video">
-    <h4>🎥 Watch these before you sleep</h4>
-    <a class="video-link" href="https://www.youtube.com/results?search_query=amoeba+sisters+cell+theory" target="_blank">Amoeba Sisters — Cell Theory</a>
+    <h4>🎥 Watch these</h4>
     <a class="video-link" href="https://www.youtube.com/results?search_query=magnification+calculation+ib+biology" target="_blank">Magnification calculation practice</a>
     <a class="video-link" href="https://www.youtube.com/results?search_query=electron+microscopy+explained" target="_blank">Electron microscopy explained</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=immunofluorescence+microscopy" target="_blank">Immunofluorescence</a>
   </div>
 </section>
 
 <!-- ================ COMMON FEATURES ================ -->
 <section id="common">
   <span class="section-tag">A2.2.4</span>
-  <h2 class="section-title">What ALL cells have 🌟</h2>
+  <h2 class="section-title">Structures common to ALL cells 🌟</h2>
   <p class="section-sub">Every single cell on Earth — bacterium, moss, or elephant — shares these four things.</p>
 
   <div class="card-grid">
     <div class="card">
       <div class="emoji">🧬</div>
       <h4>DNA</h4>
-      <p>The genetic blueprint. Tells the cell what proteins to build.</p>
+      <p>Genetic material — the blueprint for making proteins.</p>
     </div>
     <div class="card">
       <div class="emoji">💧</div>
@@ -630,135 +724,161 @@
     <div class="card">
       <div class="emoji">🛡️</div>
       <h4>Plasma membrane</h4>
-      <p>The fatty outer boundary. Controls what comes in & out.</p>
+      <p>Fatty outer boundary made of lipids. Controls what enters & leaves.</p>
     </div>
   </div>
 
-  <p><strong>Why does this matter?</strong> Because whenever the exam asks "what do prokaryotes and eukaryotes have in common?" — this list is the answer.</p>
+  <div class="callout callout-tip">
+    <p><strong>Why does this list matter?</strong> Whenever the exam asks "what do prokaryotes and eukaryotes have in common?" — this list is the answer.</p>
+  </div>
 </section>
 
 <!-- ================ PROKARYOTES ================ -->
 <section id="prokaryotes">
   <span class="section-tag">A2.2.5</span>
   <h2 class="section-title">Prokaryotic cells 🦠</h2>
-  <p class="section-sub">The simple ones. Bacteria & archaea. No nucleus, no organelles.</p>
+  <p class="section-sub">The simple ones. Bacteria & archaea. Example organism: <em>Bacillus</em> or <em>Staphylococcus</em>.</p>
 
   <div class="diagram">
     <svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
-      <!-- flagella -->
       <path d="M 40 130 Q 30 100 20 120 Q 15 140 25 145" stroke="#888" fill="none" stroke-width="2"/>
       <path d="M 40 130 Q 30 160 20 155 Q 15 145 25 145" stroke="#888" fill="none" stroke-width="2"/>
-      <!-- cell wall -->
       <ellipse cx="250" cy="130" rx="200" ry="90" fill="#cde3d5" stroke="#6b8f5c" stroke-width="4"/>
-      <!-- cell membrane -->
       <ellipse cx="250" cy="130" rx="190" ry="82" fill="#f7ede0" stroke="#c76a4a" stroke-width="2"/>
-      <!-- nucleoid -->
       <path d="M 200 120 Q 220 100 250 115 Q 280 130 290 110 Q 300 140 260 135 Q 220 145 200 125 Z" fill="#c76a4a" opacity="0.7"/>
       <text x="220" y="160" font-family="Fraunces" font-size="12" fill="#333">nucleoid (DNA)</text>
-      <!-- plasmid -->
       <ellipse cx="180" cy="170" rx="15" ry="8" fill="none" stroke="#4a7ab8" stroke-width="2"/>
       <text x="130" y="200" font-family="Fraunces" font-size="12" fill="#4a7ab8">plasmid</text>
-      <!-- ribosomes -->
       <circle cx="330" cy="150" r="3" fill="#6b4e8f"/>
       <circle cx="350" cy="130" r="3" fill="#6b4e8f"/>
       <circle cx="320" cy="180" r="3" fill="#6b4e8f"/>
       <circle cx="365" cy="160" r="3" fill="#6b4e8f"/>
       <text x="380" y="155" font-family="Fraunces" font-size="12" fill="#6b4e8f">70S ribosomes</text>
-      <!-- labels -->
       <text x="20" y="50" font-family="Fraunces" font-size="12" fill="#6b8f5c">cell wall (peptidoglycan)</text>
       <line x1="120" y1="55" x2="180" y2="80" stroke="#6b8f5c" stroke-width="1"/>
       <text x="350" y="50" font-family="Fraunces" font-size="12" fill="#c76a4a">plasma membrane</text>
       <line x1="380" y1="55" x2="360" y2="85" stroke="#c76a4a" stroke-width="1"/>
       <text x="240" y="240" font-family="Fraunces" font-size="12" fill="#666">cytoplasm fills everything else</text>
     </svg>
-    <div class="diagram-caption">Simplified prokaryote (like <em>E. coli</em> or <em>Bacillus</em>)</div>
+    <div class="diagram-caption">Simplified prokaryote — memorize this layout!</div>
   </div>
 
-  <h3>The 5 must-know parts</h3>
-  <ul class="pretty">
-    <li><strong>Cell wall</strong> — made of <span class="term">peptidoglycan</span> in bacteria. Provides structure & protection. Draw it as <em>two lines</em>.</li>
-    <li><strong>Plasma membrane</strong> — the inner boundary. Made of phospholipids + proteins.</li>
-    <li><strong>Cytoplasm</strong> — the watery interior where reactions happen.</li>
-    <li><strong>Naked, looped DNA</strong> — floats free in the <span class="term">nucleoid region</span> (not a real organelle, just a zone). Sometimes there are extra small loops = <span class="term">plasmids</span>.</li>
-    <li><strong>70S ribosomes</strong> — smaller than the 80S ones in eukaryotes. Draw as tiny dots.</li>
-  </ul>
+  <h3>The 5 must-know parts + their functions</h3>
+  <table>
+    <tr><th>Structure</th><th>Function</th></tr>
+    <tr>
+      <td><strong>Cell wall</strong></td>
+      <td>Made of <span class="term">peptidoglycan</span>. Provides structure & protection. Draw as <em>two lines</em> with the label going between them.</td>
+    </tr>
+    <tr>
+      <td><strong>Plasma membrane</strong></td>
+      <td>The inner boundary. Made of phospholipids + proteins. Controls entry/exit. Label as the <em>inner line</em> of the cell wall.</td>
+    </tr>
+    <tr>
+      <td><strong>Cytoplasm</strong></td>
+      <td>Watery interior where metabolic reactions happen.</td>
+    </tr>
+    <tr>
+      <td><strong>Nucleoid DNA</strong></td>
+      <td>The main chromosome. It's a single <em>circular loop</em> of DNA, floating free in a region called the nucleoid. Extra small loops = <strong>plasmids</strong>.</td>
+    </tr>
+    <tr>
+      <td><strong>70S ribosomes</strong></td>
+      <td>Build proteins. Smaller than the 80S ones in eukaryotes. Draw as tiny dots.</td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <h4>🎯 What does "naked DNA" mean?</h4>
+    <p><strong>Naked</strong> = the DNA is <em>not</em> wrapped around any proteins (like histones). It's bare — just the DNA molecule sitting free in the nucleoid region. Eukaryotic DNA, by contrast, is wound tightly around histone proteins.</p>
+  </div>
 
   <div class="callout callout-warn">
     <h4>⚠️ Common exam trap</h4>
-    <p>Prokaryotes do <strong>not</strong> have mitochondria, ER, Golgi, or a nucleus. If you see any of those, it's a eukaryote. Also — the DNA is <strong>naked</strong> (no histones) and <strong>circular</strong>, not linear.</p>
+    <p>Prokaryotes do <strong>not</strong> have mitochondria, ER, Golgi, or a nucleus. If you see any of those, it's a eukaryote. The <em>nucleoid region</em> is NOT the same thing as a nucleus — it's just a zone where the DNA hangs out, no membrane around it.</p>
   </div>
 </section>
 
 <!-- ================ EUKARYOTES ================ -->
 <section id="eukaryotes">
-  <span class="section-tag">A2.2.6 & B2.2</span>
-  <h2 class="section-title">Eukaryotic cells & their organelles 🏛️</h2>
-  <p class="section-sub">The complex ones. Compartmentalized. Full of specialized rooms called organelles.</p>
+  <span class="section-tag">A2.2.6</span>
+  <h2 class="section-title">Eukaryotic cells 🏛️</h2>
+  <p class="section-sub">The complex ones — full of specialized "rooms" called organelles.</p>
 
   <p>An <span class="term">organelle</span> = a specialized structure inside a cell that performs a specific job. Just like <em>organs</em> in a body.</p>
-
-  <div class="callout">
-    <h4>🚨 Not everything is an organelle</h4>
-    <p><strong>Structural parts</strong> like the cell wall, cytoskeleton, and cytoplasm are NOT organelles. <strong>Functional parts</strong> like the nucleus, mitochondria, ribosomes, vesicles, and plasma membrane ARE.</p>
-  </div>
 
   <h3>The organelle roster 🎭</h3>
 
   <div class="card-grid">
     <div class="card">
-      <div class="emoji">🏛️</div>
-      <h4>Nucleus</h4>
-      <p><strong>Function:</strong> stores DNA, controls the cell. Has a <em>double membrane</em> with pores for mRNA to exit.</p>
+      <div class="emoji">🛡️</div>
+      <h4>Plasma membrane</h4>
+      <p>Selectively permeable outer boundary.</p>
     </div>
     <div class="card">
-      <div class="emoji">🔋</div>
-      <h4>Mitochondria</h4>
-      <p><strong>Function:</strong> aerobic respiration → makes ATP (energy). Double membrane; inner one folded into <em>cristae</em>.</p>
-    </div>
-    <div class="card">
-      <div class="emoji">🏭</div>
-      <h4>Rough ER</h4>
-      <p><strong>Function:</strong> makes proteins for export. Covered in ribosomes → looks "rough."</p>
-    </div>
-    <div class="card">
-      <div class="emoji">🧪</div>
-      <h4>Smooth ER</h4>
-      <p><strong>Function:</strong> makes lipids, detoxifies drugs & alcohol. No ribosomes.</p>
-    </div>
-    <div class="card">
-      <div class="emoji">📮</div>
-      <h4>Golgi apparatus</h4>
-      <p><strong>Function:</strong> modifies & packages proteins into vesicles for shipping. Stack of flat sacs.</p>
-    </div>
-    <div class="card">
-      <div class="emoji">📦</div>
-      <h4>Vesicles</h4>
-      <p><strong>Function:</strong> transport materials around the cell. Little membrane bubbles.</p>
-    </div>
-    <div class="card">
-      <div class="emoji">🧨</div>
-      <h4>Lysosomes</h4>
-      <p><strong>Function:</strong> contain digestive enzymes. Break down waste & old organelles.</p>
-    </div>
-    <div class="card">
-      <div class="emoji">🌿</div>
-      <h4>Chloroplasts <em>(plants only)</em></h4>
-      <p><strong>Function:</strong> photosynthesis. Double membrane, contain green chlorophyll.</p>
-    </div>
-    <div class="card">
-      <div class="emoji">🕸️</div>
-      <h4>Cytoskeleton</h4>
-      <p><strong>Function:</strong> gives shape & moves things. <em>Microtubules</em> (railways) + <em>microfilaments</em> (tension).</p>
+      <div class="emoji">💧</div>
+      <h4>Cytoplasm</h4>
+      <p>Watery interior — location of many reactions.</p>
     </div>
     <div class="card">
       <div class="emoji">⚙️</div>
       <h4>80S Ribosomes</h4>
-      <p><strong>Function:</strong> protein synthesis. Bigger than prokaryote ribosomes. Free-floating OR bound to rough ER.</p>
+      <p>Protein synthesis. Bigger than prokaryote 70S. Free-floating OR attached to rough ER.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🏛️</div>
+      <h4>Nucleus</h4>
+      <p>Stores DNA (bound to <em>histones</em>, linear chromosomes). Double membrane with pores. Controls the cell.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🔋</div>
+      <h4>Mitochondria</h4>
+      <p>Aerobic respiration → makes ATP (energy). Double membrane; inner one folded into <em>cristae</em>.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🌿</div>
+      <h4>Chloroplasts <em>(plants only)</em></h4>
+      <p>Photosynthesis. Contain green chlorophyll & stacks of thylakoids.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🏭</div>
+      <h4>Rough ER</h4>
+      <p>Covered in ribosomes. Makes proteins destined for export or the membrane.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🧪</div>
+      <h4>Smooth ER</h4>
+      <p>No ribosomes. Makes lipids, detoxifies drugs & alcohol.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">📮</div>
+      <h4>Golgi apparatus</h4>
+      <p>Modifies & packages proteins into vesicles for shipping. Stack of flat sacs.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">📦</div>
+      <h4>Vesicles</h4>
+      <p>Small membrane bubbles that transport materials around the cell.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🫧</div>
+      <h4>Vacuoles</h4>
+      <p>Larger sacs — store water, food, or waste. Big central one in plants provides support.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🧨</div>
+      <h4>Lysosomes</h4>
+      <p>Contain digestive enzymes. Break down waste, food, or old organelles.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🕸️</div>
+      <h4>Cytoskeleton</h4>
+      <p>Gives shape & moves things. <em>Microtubules</em> (railway tracks) + <em>microfilaments</em> (tension).</p>
     </div>
   </div>
 
   <h3>🧬 The protein-making assembly line</h3>
-  <p>This flow is <em>gold</em> for exam essays. Memorize it:</p>
+  <p>Memorize this pathway — it comes up in essay questions:</p>
 
   <div class="diagram" style="background:linear-gradient(135deg, #cde3d5, #cfe3ee);">
     <div style="font-size:15px;font-weight:600;line-height:2;">
@@ -770,14 +890,24 @@
       🛡️ Plasma membrane <span style="color:var(--accent)">→</span>
       🌍 Out!
     </div>
-    <div class="diagram-caption">The path a secreted protein takes from DNA instructions to leaving the cell</div>
+    <div class="diagram-caption">Path of a secreted protein from DNA instructions to leaving the cell</div>
   </div>
 
+  <h3>Compare & contrast: prokaryote vs. eukaryote</h3>
+  <table>
+    <tr><th>Feature</th><th>Prokaryote</th><th>Eukaryote</th></tr>
+    <tr><td>Nucleus?</td><td>❌ Nucleoid region only</td><td>✅ Yes, with double membrane</td></tr>
+    <tr><td>DNA shape</td><td>Circular loop</td><td>Linear chromosomes</td></tr>
+    <tr><td>DNA covering</td><td>Naked (no proteins)</td><td>Wrapped around histones</td></tr>
+    <tr><td>Ribosomes</td><td>70S (smaller)</td><td>80S (larger)</td></tr>
+    <tr><td>Membrane-bound organelles?</td><td>❌ None</td><td>✅ Many</td></tr>
+    <tr><td>Size</td><td>Small (~1–10 μm)</td><td>Larger (~10–100 μm)</td></tr>
+    <tr><td>Cell wall?</td><td>Yes — peptidoglycan</td><td>Some (plants: cellulose; fungi: chitin)</td></tr>
+  </table>
+
   <div class="callout callout-video">
-    <h4>🎥 See it in motion</h4>
     <a class="video-link" href="https://www.youtube.com/results?search_query=amoeba+sisters+organelles" target="_blank">Amoeba Sisters — Organelles</a>
-    <a class="video-link" href="https://www.youtube.com/results?search_query=inner+life+of+the+cell+harvard" target="_blank">"The Inner Life of the Cell" (Harvard animation — stunning)</a>
-    <a class="video-link" href="https://www.youtube.com/results?search_query=protein+synthesis+animation" target="_blank">Protein synthesis animation</a>
+    <a class="video-link" href="https://www.youtube.com/results?search_query=inner+life+of+the+cell+harvard" target="_blank">"The Inner Life of the Cell" (stunning animation)</a>
   </div>
 </section>
 
@@ -785,24 +915,39 @@
 <section id="life-functions">
   <span class="section-tag">A2.2.7</span>
   <h2 class="section-title">Functions of life 🌱</h2>
-  <p class="section-sub">Unicellular organisms (like <em>Paramecium</em>) do ALL 8 of these in one single cell.</p>
+  <p class="section-sub">Unicellular organisms like <em>Paramecium</em> do ALL 8 of these in a single cell.</p>
 
   <div class="mnemonic">
     <div style="color:var(--muted);font-size:14px;">Say hi to</div>
     <div class="letters">Mr. H. GREN</div>
-    <div style="color:var(--muted);">Metabolism · Response · Homeostasis · Growth · Reproduction · Excretion · Nutrition (plus Movement)</div>
+    <div style="color:var(--muted);">plus Movement</div>
   </div>
 
   <table>
-    <tr><th>Function</th><th>Meaning</th></tr>
-    <tr><td><strong>Metabolism</strong></td><td>All the enzyme reactions in the cell (e.g. respiration)</td></tr>
-    <tr><td><strong>Response</strong></td><td>Detecting & reacting to stimuli</td></tr>
-    <tr><td><strong>Homeostasis</strong></td><td>Keeping internal conditions stable (pH, water)</td></tr>
-    <tr><td><strong>Movement</strong></td><td>Small-scale (organelles) or large (whole organism)</td></tr>
-    <tr><td><strong>Growth</strong></td><td>Getting bigger or changing shape</td></tr>
-    <tr><td><strong>Reproduction</strong></td><td>Making offspring (sexually or asexually)</td></tr>
-    <tr><td><strong>Excretion</strong></td><td>Removing metabolic waste</td></tr>
-    <tr><td><strong>Nutrition</strong></td><td>Getting energy — photosynthesize or absorb food</td></tr>
+    <tr><th>Function</th><th>Definition</th></tr>
+    <tr><td><strong>Metabolism</strong></td><td>All the enzyme-catalyzed reactions inside the cell (e.g. respiration).</td></tr>
+    <tr><td><strong>Response</strong></td><td>Sensing & reacting to stimuli in the environment.</td></tr>
+    <tr><td><strong>Homeostasis</strong></td><td>Keeping internal conditions stable (pH, water, temperature).</td></tr>
+    <tr><td><strong>Movement</strong></td><td>Small-scale (organelles moving inside cell) or large (whole organism moving).</td></tr>
+    <tr><td><strong>Growth</strong></td><td>Getting bigger or changing shape.</td></tr>
+    <tr><td><strong>Reproduction</strong></td><td>Producing offspring — sexually or asexually.</td></tr>
+    <tr><td><strong>Excretion</strong></td><td>Removing metabolic waste products.</td></tr>
+    <tr><td><strong>Nutrition</strong></td><td>Getting energy — by synthesizing organic molecules (photosynthesis) or absorbing them.</td></tr>
+  </table>
+
+  <h3>How Paramecium does all 8 🐛</h3>
+  <p><em>Paramecium</em> is a unicellular protist you'll see in exam questions. Each function of life maps to a feature it has:</p>
+
+  <table>
+    <tr><th>Function</th><th>How Paramecium does it</th></tr>
+    <tr><td><strong>Movement</strong></td><td>Beats tiny hair-like <span class="term">cilia</span> on its surface to swim.</td></tr>
+    <tr><td><strong>Response</strong></td><td>Detects chemicals in the water & swims toward food (or away from danger).</td></tr>
+    <tr><td><strong>Nutrition</strong></td><td>Sweeps food particles into its <span class="term">oral groove</span> → forms a <em>food vacuole</em>.</td></tr>
+    <tr><td><strong>Metabolism</strong></td><td>Digestive enzymes break down the food inside the food vacuole → energy for the cell.</td></tr>
+    <tr><td><strong>Growth</strong></td><td>Uses the nutrients from digestion to grow bigger.</td></tr>
+    <tr><td><strong>Homeostasis</strong></td><td>Has <span class="term">contractile vacuoles</span> that pump out excess water (freshwater = hypotonic → water floods in).</td></tr>
+    <tr><td><strong>Excretion</strong></td><td>Waste diffuses out across the plasma membrane (or is expelled via anal pore).</td></tr>
+    <tr><td><strong>Reproduction</strong></td><td>Divides by binary fission (asexual) — one cell splits into two.</td></tr>
   </table>
 </section>
 
@@ -828,8 +973,8 @@
     <tr>
       <td><strong>Vacuoles</strong></td>
       <td>Small, temporary</td>
-      <td>Large central (support)</td>
-      <td>Large central (support)</td>
+      <td>Large central (storage & support)</td>
+      <td>Large central (storage & turgor pressure)</td>
     </tr>
     <tr>
       <td><strong>Chloroplasts</strong></td>
@@ -838,15 +983,21 @@
       <td>✅ Yes — photosynthesis!</td>
     </tr>
     <tr>
-      <td><strong>Centrioles, cilia, flagella</strong></td>
-      <td>✅ Yes</td>
-      <td>❌ Usually not (except some sex cells)</td>
-      <td>❌ Usually not (except some sex cells)</td>
+      <td><strong>Centrioles</strong></td>
+      <td>✅ Yes — organize cytoskeleton</td>
+      <td>❌ Usually not</td>
+      <td>❌ Usually not</td>
+    </tr>
+    <tr>
+      <td><strong>Cilia & flagella</strong></td>
+      <td>✅ Yes — for movement</td>
+      <td>❌ (except a few sex cells)</td>
+      <td>❌ (except a few sex cells like in mosses)</td>
     </tr>
   </table>
 
   <div class="callout callout-tip">
-    <h4>🧠 Remember it as:</h4>
+    <h4>🧠 Quick way to remember</h4>
     <p><strong>Plants</strong> = cellulose wall + chloroplasts + big vacuole. <strong>Fungi</strong> = chitin wall + big vacuole, no chloroplasts. <strong>Animals</strong> = no wall + moving parts (centrioles/cilia).</p>
   </div>
 </section>
@@ -854,7 +1005,7 @@
 <!-- ================ ATYPICAL ================ -->
 <section id="atypical">
   <span class="section-tag">A2.2.9</span>
-  <h2 class="section-title">The weird cells 🎪</h2>
+  <h2 class="section-title">Atypical eukaryotic cells 🎪</h2>
   <p class="section-sub">Most cells have exactly one nucleus. These four break that rule for good reasons.</p>
 
   <table>
@@ -862,31 +1013,77 @@
     <tr>
       <td><strong>Red blood cell</strong> 🩸</td>
       <td>Zero</td>
-      <td>Too big! Nucleus (~10 μm) wouldn't fit through capillaries (~8 μm). Dumps it to squeeze through.</td>
+      <td>Nucleus (~10 μm) too big to fit through capillaries (~8 μm). Ejects it during development to squeeze through. Also loses mitochondria → more room for hemoglobin.</td>
     </tr>
     <tr>
       <td><strong>Aseptate fungal hyphae</strong> 🍄</td>
       <td>Many</td>
-      <td>Cell is super long — one nucleus can't control it all.</td>
+      <td>Hyphae are super long tubes. One nucleus can only control a limited area — long cells need multiple.</td>
     </tr>
     <tr>
       <td><strong>Skeletal muscle fiber</strong> 💪</td>
       <td>Many</td>
-      <td>Super long, needs multiple control centers.</td>
+      <td>Super long fibers (up to several cm). Same problem — one nucleus can't control the whole length.</td>
     </tr>
     <tr>
       <td><strong>Phloem sieve tube element</strong> 🌱</td>
       <td>Zero</td>
-      <td>Needs a hollow tube for sap to flow — nucleus removed to make space.</td>
+      <td>Needs to be a hollow tube for sap to flow through. Nucleus & most organelles removed to make an open space.</td>
     </tr>
   </table>
 </section>
 
+<!-- ================ MICROGRAPHS ================ -->
+<section id="micrographs">
+  <span class="section-tag">A2.2.10 – A2.2.11</span>
+  <h2 class="section-title">Reading & drawing micrographs 🖼️</h2>
+  <p class="section-sub">Identifying cells and structures in electron micrographs — nearly guaranteed exam question.</p>
+
+  <h3>Is it prokaryote, plant, or animal?</h3>
+  <ul class="pretty">
+    <li><strong>Prokaryote:</strong> tiny, no visible organelles, has a cell wall, DNA looks like a squiggle (nucleoid).</li>
+    <li><strong>Plant cell:</strong> has a cell wall (straight edge, boxy shape), large central vacuole, chloroplasts (oval green structures).</li>
+    <li><strong>Animal cell:</strong> irregular/round shape, no cell wall, no chloroplasts, no big vacuole. Just organelles.</li>
+  </ul>
+
+  <h3>Structures you must be able to identify</h3>
+  <div class="card-grid">
+    <div class="card"><strong>Nucleoid region</strong><p>Prokaryotes — big pale squiggle in the center.</p></div>
+    <div class="card"><strong>Nucleus</strong><p>Large dark round structure with a membrane.</p></div>
+    <div class="card"><strong>Cell wall</strong><p>Thick outer boundary — straight in plants.</p></div>
+    <div class="card"><strong>Plasma membrane</strong><p>Thin outer boundary line.</p></div>
+    <div class="card"><strong>Ribosomes</strong><p>Tiny black dots.</p></div>
+    <div class="card"><strong>Mitochondrion</strong><p>Oval, with folded internal membrane (cristae).</p></div>
+    <div class="card"><strong>Chloroplast</strong><p>Oval, contains stacks of thylakoids.</p></div>
+    <div class="card"><strong>Rough ER</strong><p>Membrane sheets with dots (ribosomes) on them.</p></div>
+    <div class="card"><strong>Smooth ER</strong><p>Membrane tubes without dots.</p></div>
+    <div class="card"><strong>Golgi apparatus</strong><p>Stack of flattened, curved membranes.</p></div>
+    <div class="card"><strong>Vesicle</strong><p>Small membrane-bound bubble.</p></div>
+    <div class="card"><strong>Sap vacuole</strong><p>Big empty-looking space in plant cells.</p></div>
+    <div class="card"><strong>Chromosomes</strong><p>Dark condensed DNA structures (mitosis).</p></div>
+    <div class="card"><strong>Microvilli</strong><p>Finger-like folds of the plasma membrane.</p></div>
+    <div class="card"><strong>Cilia / flagella</strong><p>Hair-like projections sticking out of the cell.</p></div>
+  </div>
+
+  <h3>Drawing tips ✏️</h3>
+  <div class="callout callout-tip">
+    <ul class="pretty">
+      <li><strong>Draw big.</strong> Small drawings lose marks. Fill the space you're given.</li>
+      <li><strong>Use clean, unbroken lines.</strong> No sketchy hairy lines. One clean stroke.</li>
+      <li><strong>No shading.</strong> Just outlines.</li>
+      <li><strong>Label with a straight ruled line</strong> that TOUCHES the structure. Empty line = no mark.</li>
+      <li><strong>Annotate</strong> = label + brief function. If a question says "annotate," don't just label.</li>
+      <li><strong>Include a scale bar</strong> if you're reproducing the micrograph.</li>
+      <li><strong>Draw the cell wall as TWO lines</strong> and label between them.</li>
+    </ul>
+  </div>
+</section>
+
 <!-- ================ MEMBRANE STRUCTURE ================ -->
 <section id="membrane-structure">
-  <span class="section-tag">B2.1.1 – B2.1.4, B2.1.9, B2.1.10</span>
-  <h2 class="section-title">Membrane structure 🧱</h2>
-  <p class="section-sub">Now switching topics: the FLUID MOSAIC MODEL. A wobbly sandwich full of proteins.</p>
+  <span class="section-tag">B2.1.1, B2.1.4, B2.1.9, B2.1.10</span>
+  <h2 class="section-title">Membrane structure — the fluid mosaic 🧱</h2>
+  <p class="section-sub">A wobbly phospholipid sandwich full of proteins.</p>
 
   <h3>Phospholipids — the bricks</h3>
   <p>A phospholipid is <span class="term">amphipathic</span> — it has BOTH a polar and nonpolar end:</p>
@@ -904,44 +1101,46 @@
     <div class="diagram-caption">One phospholipid = polar head + 2 nonpolar fatty acid tails</div>
   </div>
 
-  <p>When you drop them in water, they self-assemble into a <strong>bilayer</strong> — heads face out (toward water), tails hide in the middle.</p>
+  <p>When you drop them in water, they self-assemble into a <strong>bilayer</strong> — heads face out (toward water inside AND outside the cell), tails hide in the middle.</p>
+
+  <h3>Where do you find lipid bilayers?</h3>
+  <ul class="pretty">
+    <li>Plasma membrane (outer boundary of every cell)</li>
+    <li>Nuclear envelope (double membrane around the nucleus)</li>
+    <li>Membranes around all organelles (mitochondria, ER, Golgi, vesicles, etc.)</li>
+    <li>Inside the mitochondrion (the cristae folds)</li>
+    <li>Inside the chloroplast (thylakoid membranes)</li>
+  </ul>
 
   <h3>The fluid mosaic model 🎨</h3>
-  <p>The membrane is <em>fluid</em> (things drift around like a liquid) and <em>mosaic</em> (a mix of different molecules).</p>
+  <p>The membrane is <em>fluid</em> (molecules drift around like a liquid) and <em>mosaic</em> (a mix of different molecules).</p>
 
   <div class="diagram">
     <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
-      <!-- top layer -->
       <g>
         <circle cx="30" cy="50" r="10" fill="#4a7ab8"/><line x1="30" y1="60" x2="30" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="55" cy="50" r="10" fill="#4a7ab8"/><line x1="55" y1="60" x2="55" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="80" cy="50" r="10" fill="#4a7ab8"/><line x1="80" y1="60" x2="80" y2="110" stroke="#d4a24c" stroke-width="3"/>
-        <!-- integral protein -->
         <rect x="100" y="30" width="30" height="100" rx="5" fill="#6b8f5c"/>
         <circle cx="145" cy="50" r="10" fill="#4a7ab8"/><line x1="145" y1="60" x2="145" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="170" cy="50" r="10" fill="#4a7ab8"/><line x1="170" y1="60" x2="170" y2="110" stroke="#d4a24c" stroke-width="3"/>
-        <!-- glycoprotein -->
         <ellipse cx="200" cy="55" rx="15" ry="12" fill="#8a5a3a"/>
         <line x1="200" y1="65" x2="200" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <path d="M 195 40 L 195 25 M 200 40 L 200 20 M 205 40 L 205 25" stroke="#6b8f5c" stroke-width="2"/>
         <circle cx="195" cy="25" r="3" fill="#6b8f5c"/>
         <circle cx="200" cy="20" r="3" fill="#6b8f5c"/>
         <circle cx="205" cy="25" r="3" fill="#6b8f5c"/>
-        <!-- continue -->
         <circle cx="225" cy="50" r="10" fill="#4a7ab8"/><line x1="225" y1="60" x2="225" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="250" cy="50" r="10" fill="#4a7ab8"/><line x1="250" y1="60" x2="250" y2="110" stroke="#d4a24c" stroke-width="3"/>
-        <!-- cholesterol -->
         <ellipse cx="275" cy="80" rx="8" ry="18" fill="#d4a24c" opacity="0.8"/>
         <circle cx="300" cy="50" r="10" fill="#4a7ab8"/><line x1="300" y1="60" x2="300" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="325" cy="50" r="10" fill="#4a7ab8"/><line x1="325" y1="60" x2="325" y2="110" stroke="#d4a24c" stroke-width="3"/>
-        <!-- channel -->
         <rect x="350" y="30" width="30" height="100" rx="5" fill="#6b8f5c"/>
         <rect x="360" y="30" width="10" height="100" fill="white"/>
         <circle cx="400" cy="50" r="10" fill="#4a7ab8"/><line x1="400" y1="60" x2="400" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="425" cy="50" r="10" fill="#4a7ab8"/><line x1="425" y1="60" x2="425" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="450" cy="50" r="10" fill="#4a7ab8"/><line x1="450" y1="60" x2="450" y2="110" stroke="#d4a24c" stroke-width="3"/>
       </g>
-      <!-- bottom layer -->
       <g>
         <circle cx="30" cy="170" r="10" fill="#4a7ab8"/><line x1="30" y1="160" x2="30" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="55" cy="170" r="10" fill="#4a7ab8"/><line x1="55" y1="160" x2="55" y2="110" stroke="#d4a24c" stroke-width="3"/>
@@ -950,7 +1149,6 @@
         <circle cx="170" cy="170" r="10" fill="#4a7ab8"/><line x1="170" y1="160" x2="170" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="225" cy="170" r="10" fill="#4a7ab8"/><line x1="225" y1="160" x2="225" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="250" cy="170" r="10" fill="#4a7ab8"/><line x1="250" y1="160" x2="250" y2="110" stroke="#d4a24c" stroke-width="3"/>
-        <!-- peripheral protein -->
         <ellipse cx="270" cy="185" rx="20" ry="10" fill="#c76a4a"/>
         <circle cx="300" cy="170" r="10" fill="#4a7ab8"/><line x1="300" y1="160" x2="300" y2="110" stroke="#d4a24c" stroke-width="3"/>
         <circle cx="325" cy="170" r="10" fill="#4a7ab8"/><line x1="325" y1="160" x2="325" y2="110" stroke="#d4a24c" stroke-width="3"/>
@@ -959,119 +1157,151 @@
         <circle cx="450" cy="170" r="10" fill="#4a7ab8"/><line x1="450" y1="160" x2="450" y2="110" stroke="#d4a24c" stroke-width="3"/>
       </g>
     </svg>
-    <div class="diagram-caption">The fluid mosaic — you should be able to draw this. Include: phospholipids, integral & peripheral proteins, cholesterol, glycoprotein.</div>
+    <div class="diagram-caption">You must be able to draw this. Required labels: phospholipids (with head + tails), integral proteins, peripheral proteins, glycoprotein, cholesterol, hydrophilic head, hydrophobic tails.</div>
   </div>
 
-  <h3>Membrane proteins — remember "CRATER"</h3>
-  <div class="mnemonic">
-    <div class="letters">CRATER</div>
-    <div style="font-size:15px;color:var(--muted);line-height:1.8;">
-      <strong>C</strong>onnect (intercellular joinings)<br>
-      <strong>R</strong>ecognize (cell-cell recognition)<br>
-      <strong>A</strong>nchor (attachment/anchorage)<br>
-      <strong>T</strong>ransport (active or passive)<br>
-      <strong>E</strong>nzymes (catalyze reactions)<br>
-      <strong>R</strong>eceptors (signal transduction)
-    </div>
-  </div>
-
-  <h3>Integral vs. peripheral</h3>
+  <h3>Integral vs. peripheral proteins</h3>
   <div class="two-col">
     <div class="callout">
       <h4>Integral proteins</h4>
-      <p>Embedded <strong>in</strong> the bilayer — often go all the way through. Transport channels, pumps, receptors.</p>
+      <p>Embedded <strong>within</strong> the bilayer — often going all the way through. Have hydrophobic amino acids in the middle (so they stay put in the fatty core) and hydrophilic ones sticking out into the water.</p>
     </div>
     <div class="callout callout-tip">
       <h4>Peripheral proteins</h4>
-      <p>Attached to the <strong>surface</strong> only. Support & signaling roles.</p>
+      <p>Attached to the <strong>surface</strong> only — never crossing the membrane. Anchored by weak interactions with the polar heads or with integral proteins.</p>
     </div>
   </div>
 
+  <h3>The 6 functions of membrane proteins — "CRATER"</h3>
+  <div class="mnemonic">
+    <div class="letters">CRATER</div>
+  </div>
+
+  <table>
+    <tr><th>Letter</th><th>Function</th><th>Example</th></tr>
+    <tr><td><strong>C</strong></td><td><strong>C</strong>onnect (intercellular joinings)</td><td>Proteins that link neighbouring cells to form tissues.</td></tr>
+    <tr><td><strong>R</strong></td><td><strong>R</strong>ecognize (cell-cell recognition)</td><td>Glycoproteins that identify "self" vs. invader.</td></tr>
+    <tr><td><strong>A</strong></td><td><strong>A</strong>nchor (attachment)</td><td>Proteins that anchor the cell to the cytoskeleton or extracellular matrix.</td></tr>
+    <tr><td><strong>T</strong></td><td><strong>T</strong>ransport (active or passive)</td><td>Channels & pumps that move ions/molecules across.</td></tr>
+    <tr><td><strong>E</strong></td><td><strong>E</strong>nzymatic activity</td><td>Membrane enzymes catalyze reactions right at the surface.</td></tr>
+    <tr><td><strong>R</strong></td><td><strong>R</strong>eceptors (signal transduction)</td><td>Bind signal molecules (hormones) and trigger a response inside the cell.</td></tr>
+  </table>
+
   <h3>Glycoproteins & glycolipids 🎗️</h3>
-  <p>These are proteins/lipids with sugar chains sticking OUT of the cell. They act as <strong>ID tags</strong> — your immune system reads them to tell "self" from "invader." Blood types (A, B, O) work this way!</p>
+  <p><strong>Glycoproteins</strong> = protein with a sugar (carbohydrate) chain attached. <strong>Glycolipids</strong> = lipid with a sugar chain attached. Both have their sugar chains sticking OUT of the cell (into the extracellular space).</p>
+
+  <p>They act as <strong>ID tags</strong>:</p>
+  <ul class="pretty">
+    <li><strong>Cell recognition</strong> — your immune system uses these to tell "self" from "invader." Blood types (A, B, AB, O) are literally different sugar chains on your red blood cell glycoproteins.</li>
+    <li><strong>Cell adhesion</strong> — help cells stick together to form tissues.</li>
+  </ul>
 </section>
 
-<!-- ================ TRANSPORT ================ -->
-<section id="transport">
-  <span class="section-tag">B2.1.2, B2.1.3, B2.1.6, B2.1.7, B2.1.8</span>
-  <h2 class="section-title">Transport across membranes 🚦</h2>
-  <p class="section-sub">Four ways stuff crosses the membrane. Two need energy, two don't.</p>
+<!-- ================ BARRIERS ================ -->
+<section id="barriers">
+  <span class="section-tag">B2.1.2</span>
+  <h2 class="section-title">The membrane as a barrier 🚧</h2>
+  <p class="section-sub">Why the membrane blocks some things and lets others pass.</p>
 
-  <h3>First: who can just… walk through?</h3>
-  <p>The middle of the membrane is oily (nonpolar). So:</p>
+  <div class="callout">
+    <h4>🎯 Primary function of the cell membrane</h4>
+    <p>To act as a <strong>selective barrier</strong> between the inside of the cell and the outside — controlling which substances can enter or leave.</p>
+  </div>
+
+  <p>The <strong>aqueous solutions</strong> (water-based) exist on BOTH sides of the membrane:</p>
   <ul class="pretty">
-    <li>✅ <strong>Small AND nonpolar</strong> = passes freely (O₂, CO₂)</li>
-    <li>❌ <strong>Large, polar, or charged</strong> = blocked (glucose, Na⁺, Cl⁻)</li>
+    <li><strong>Outside</strong> = extracellular fluid (e.g. blood plasma, tissue fluid)</li>
+    <li><strong>Inside</strong> = cytoplasm</li>
   </ul>
 
-  <h3>Method 1: Simple diffusion</h3>
+  <p>The membrane's fatty middle sits <em>between</em> these two watery worlds.</p>
+
+  <h3>Why the hydrophobic core is a barrier</h3>
+  <p>Middle of the membrane = nonpolar fatty acid tails. This region:</p>
+  <ul class="pretty">
+    <li>✅ <strong>Allows small, nonpolar molecules through</strong> (they're chemically similar, so they mix)</li>
+    <li>❌ <strong>Blocks large molecules</strong> (too bulky to squeeze through)</li>
+    <li>❌ <strong>Blocks polar/hydrophilic molecules</strong> like water and glucose (they don't want to enter a nonpolar zone)</li>
+    <li>❌ <strong>Blocks ions</strong> like Na⁺, K⁺, Cl⁻ (charged particles are repelled by the nonpolar core)</li>
+  </ul>
+
+  <div class="callout callout-tip">
+    <p>This is why the membrane is <strong>selectively permeable</strong> — the physics of the phospholipid bilayer naturally filters what can & can't pass. Everything else needs a protein's help.</p>
+  </div>
+</section>
+
+<!-- ================ SIMPLE DIFFUSION ================ -->
+<section id="simple-diff">
+  <span class="section-tag">B2.1.3</span>
+  <h2 class="section-title">Simple diffusion 🌫️</h2>
+  <p class="section-sub">The most basic way stuff gets across.</p>
+
   <div class="callout">
-    <p><strong>Simple diffusion</strong> = passive movement from high → low concentration, straight through the lipid bilayer. Only for small nonpolar molecules like <strong>O₂ and CO₂</strong>. No protein, no energy.</p>
+    <p><strong>Simple diffusion</strong> = the passive net movement of particles from an area of <em>high concentration</em> to an area of <em>low concentration</em>, directly through the phospholipid bilayer. No protein, no energy needed.</p>
   </div>
 
-  <h3>Method 2: Facilitated diffusion (channel proteins)</h3>
-  <div class="callout">
-    <p><strong>Facilitated diffusion</strong> = passive movement from high → low concentration, but <em>through a channel protein</em>. Used by ions and glucose. No energy needed, but the protein makes it selective.</p>
-    <p style="margin-top:8px;font-size:14px;"><strong>Gated channels</strong> can open/close in response to voltage, light, or a chemical binding. This is how nerves work.</p>
-  </div>
+  <h3>What affects the rate of diffusion?</h3>
+  <table>
+    <tr><th>Factor</th><th>Effect</th></tr>
+    <tr><td><strong>Concentration gradient</strong></td><td>Steeper gradient → faster diffusion. No gradient → no net movement.</td></tr>
+    <tr><td><strong>Particle size</strong></td><td>Smaller = faster. Big molecules can't squeeze through the bilayer.</td></tr>
+    <tr><td><strong>Polarity / charge</strong></td><td>Nonpolar molecules cross easily. Polar or charged particles are blocked.</td></tr>
+    <tr><td><strong>Temperature</strong></td><td>Higher temp → particles move faster → faster diffusion.</td></tr>
+    <tr><td><strong>Surface area</strong></td><td>More membrane area → more room to cross → faster diffusion.</td></tr>
+  </table>
 
-  <h3>Method 3: Active transport (pump proteins)</h3>
-  <div class="callout callout-warn">
-    <p><strong>Active transport</strong> = pushing molecules from LOW → HIGH concentration (uphill!) using a pump protein powered by <strong>ATP</strong>.</p>
+  <h3>Two biological examples 🌬️</h3>
+  <div class="two-col">
+    <div class="callout callout-tip">
+      <h4>Oxygen (O₂) into cells</h4>
+      <p>O₂ is small & nonpolar. Cells use it up in respiration, so its concentration inside is always LOW. O₂ diffuses IN from the blood (high concentration) across the membrane.</p>
+    </div>
+    <div class="callout">
+      <h4>Carbon dioxide (CO₂) out of cells</h4>
+      <p>CO₂ is a waste product of respiration, so its concentration inside is always HIGH. It diffuses OUT of the cell into the blood.</p>
+    </div>
   </div>
 
   <div class="diagram">
-    <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 20 90 L 380 20" stroke="#666" stroke-width="2"/>
-      <circle cx="80" cy="80" r="12" fill="#4a7ab8"/>
-      <text x="60" y="115" font-size="11">low conc.</text>
-      <text x="130" y="65" font-size="12" fill="#c76a4a">⚡ ATP</text>
-      <path d="M 130 75 L 155 60" stroke="#c76a4a" stroke-width="2" marker-end="url(#arr)"/>
-      <circle cx="200" cy="55" r="12" fill="#4a7ab8"/>
-      <circle cx="320" cy="30" r="12" fill="#4a7ab8"/>
-      <text x="290" y="15" font-size="11">high conc.</text>
+    <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+      <line x1="20" y1="20" x2="20" y2="120" stroke="#333" stroke-width="1"/>
+      <line x1="15" y1="120" x2="380" y2="120" stroke="#333" stroke-width="1"/>
+      <text x="5" y="15" font-size="10">conc.</text>
+      <circle cx="80" cy="50" r="8" fill="#4a7ab8"/>
+      <path d="M 90 50 L 300 100" stroke="#c76a4a" stroke-width="2" fill="none" marker-end="url(#arr2)"/>
+      <text x="150" y="65" font-size="12" fill="#c76a4a">passive — no ATP needed</text>
       <defs>
-        <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
           <path d="M0,0 L0,6 L6,3 z" fill="#c76a4a"/>
         </marker>
       </defs>
+      <text x="60" y="130" font-size="10">high conc.</text>
+      <text x="300" y="130" font-size="10">low conc.</text>
     </svg>
-    <div class="diagram-caption">Pushing a ball uphill — requires energy!</div>
-  </div>
-
-  <h3>Method 4: Osmosis</h3>
-  <p>Special enough to get its own section 👇</p>
-
-  <div class="callout callout-tip">
-    <h4>🧠 Quick summary</h4>
-    <table style="margin:0;">
-      <tr><th>Method</th><th>Direction</th><th>Protein?</th><th>Energy?</th></tr>
-      <tr><td>Simple diffusion</td><td>Down gradient</td><td>No</td><td>No</td></tr>
-      <tr><td>Facilitated diffusion</td><td>Down gradient</td><td>Yes (channel)</td><td>No</td></tr>
-      <tr><td>Osmosis</td><td>Water only, down its own gradient</td><td>Yes (aquaporin)</td><td>No</td></tr>
-      <tr><td>Active transport</td><td><strong>Up</strong> gradient</td><td>Yes (pump)</td><td>Yes (ATP)</td></tr>
-    </table>
-  </div>
-
-  <div class="callout callout-video">
-    <h4>🎥 Watch these</h4>
-    <a class="video-link" href="https://www.youtube.com/results?search_query=amoeba+sisters+cell+transport" target="_blank">Amoeba Sisters — Cell Transport</a>
-    <a class="video-link" href="https://www.youtube.com/results?search_query=active+transport+passive+transport+animation" target="_blank">Active vs. passive transport animation</a>
+    <div class="diagram-caption">Like a ball rolling down a hill — diffusion always goes DOWN the gradient</div>
   </div>
 </section>
 
 <!-- ================ OSMOSIS ================ -->
 <section id="osmosis">
   <span class="section-tag">B2.1.5</span>
-  <h2 class="section-title">Osmosis 💧</h2>
-  <p class="section-sub">Everyone gets confused. Here's the fix.</p>
+  <h2 class="section-title">Osmosis & aquaporins 💧</h2>
+  <p class="section-sub">The special case of water crossing membranes.</p>
 
   <div class="callout">
-    <p><strong>Osmosis</strong> = the passive movement of <strong>water</strong> through a membrane, from an area of <em>low solute</em> to <em>high solute</em> concentration. Water uses a channel protein called an <strong>aquaporin</strong> to get through.</p>
+    <p><strong>Osmosis</strong> = the passive movement of <strong>water</strong> molecules through a selectively permeable membrane, from an area of <em>low solute</em> concentration to an area of <em>high solute</em> concentration.</p>
   </div>
 
+  <h3>Why water needs help — aquaporins</h3>
+  <p>Water is a small but <em>polar</em> molecule, so it can't cross the nonpolar bilayer easily. Cells use special channel proteins called <span class="term">aquaporins</span>.</p>
+
   <div class="callout callout-tip">
-    <h4>💡 The magic phrase</h4>
+    <h4>💦 Aquaporin structure & function</h4>
+    <p>Aquaporins are integral membrane proteins that form a channel shaped so only water molecules fit through. They're extremely selective — they let water pass but block ions and other solutes. Cells with lots of water transport (like kidney cells) have LOTS of aquaporins.</p>
+  </div>
+
+  <h3>The magic phrase</h3>
+  <div class="callout callout-tip">
     <p style="font-size:22px;font-family:'Fraunces',serif;text-align:center;color:var(--accent);"><strong>Solute sucks. 💥</strong></p>
     <p>The side with <em>more solute</em> pulls water toward it. Think of it as a tug-of-war — whoever has more solute wins the water.</p>
   </div>
@@ -1081,25 +1311,24 @@
     <tr><th>Term</th><th>Meaning</th><th>What happens to a cell placed in it?</th></tr>
     <tr>
       <td><strong>Hypertonic</strong></td>
-      <td>Stronger solution (more solute outside)</td>
-      <td>Water leaves cell → cell <strong>shrinks</strong> (crenation / plasmolysis)</td>
+      <td>Higher solute concentration (outside > inside)</td>
+      <td>Water leaves the cell → cell <strong>shrinks</strong> (animal cells crenate; plant cells plasmolyze)</td>
     </tr>
     <tr>
       <td><strong>Hypotonic</strong></td>
-      <td>Weaker solution (less solute outside)</td>
-      <td>Water enters cell → cell <strong>swells</strong> or pops (lysis)</td>
+      <td>Lower solute concentration (outside < inside)</td>
+      <td>Water enters cell → cell <strong>swells</strong>. Animal cells may burst (lysis). Plant cells become turgid (good!).</td>
     </tr>
     <tr>
       <td><strong>Isotonic</strong></td>
       <td>Same concentration on both sides</td>
-      <td>No net movement — cell stays normal</td>
+      <td>No net movement — cell stays normal.</td>
     </tr>
   </table>
 
   <div class="callout callout-warn">
-    <h4>⚠️ Watch out — mixing up hyper and hypo</h4>
-    <p><strong>Hyper</strong> = high (hypertension = high pressure). Hypertonic = HIGH solute. Water leaves the cell.<br>
-    <strong>Hypo</strong> = low. Hypotonic = LOW solute. Water enters the cell.</p>
+    <h4>⚠️ Predicting water direction</h4>
+    <p>Ask yourself: which side has MORE solute? Water moves toward that side. Doesn't matter which side you're "in" — water always follows the solute.</p>
   </div>
 
   <div class="callout callout-video">
@@ -1108,41 +1337,265 @@
   </div>
 </section>
 
+<!-- ================ CHANNEL PROTEINS ================ -->
+<section id="channels">
+  <span class="section-tag">B2.1.6</span>
+  <h2 class="section-title">Channel proteins — facilitated diffusion 🚪</h2>
+  <p class="section-sub">How polar/charged molecules cross when the bilayer blocks them.</p>
+
+  <div class="callout">
+    <p><strong>Facilitated diffusion</strong> = passive movement of particles from high → low concentration, THROUGH a channel protein. Still no ATP required — the protein just provides a hydrophilic tunnel.</p>
+  </div>
+
+  <h3>Channel protein structure</h3>
+  <ul class="pretty">
+    <li>Integral protein that spans the entire membrane.</li>
+    <li>Has a <strong>hydrophilic tunnel</strong> in the middle — this lets polar/charged particles pass without touching the fatty core.</li>
+    <li>Each channel is <span class="term">specific</span> to one type of ion or molecule (its shape only fits certain particles).</li>
+  </ul>
+
+  <h3>Specificity of channels for ions</h3>
+  <p>The cell controls what enters/leaves by choosing <em>which channels</em> to make. Want more sodium in? Build more Na⁺ channels. Don't want potassium out? Don't make K⁺ channels. This is how cells achieve <strong>selective permeability</strong>.</p>
+
+  <h3>Types of gates on channel proteins</h3>
+  <p>Many channels are <span class="term">gated</span> — they can open or close depending on conditions:</p>
+  <div class="card-grid">
+    <div class="card">
+      <div class="emoji">⚡</div>
+      <h4>Voltage-gated</h4>
+      <p>Open/close in response to changes in electrical charge across the membrane. Key in nerve cells.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🔗</div>
+      <h4>Ligand-gated</h4>
+      <p>Open when a specific molecule (a "ligand") binds to them — like a neurotransmitter.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🤲</div>
+      <h4>Mechanically-gated</h4>
+      <p>Open in response to physical pressure or stretching.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">💡</div>
+      <h4>Light-gated</h4>
+      <p>Open in response to light — used in retinal cells.</p>
+    </div>
+  </div>
+
+  <h3>Example: potassium (K⁺) channels</h3>
+  <p>K⁺ ions are too charged & polar to cross the bilayer. K⁺ channels have a hydrophilic pore that lets K⁺ specifically pass through — down its concentration gradient. No ATP needed.</p>
+</section>
+
+<!-- ================ PUMPS / ACTIVE TRANSPORT ================ -->
+<section id="pumps">
+  <span class="section-tag">B2.1.7</span>
+  <h2 class="section-title">Pump proteins & active transport ⚡</h2>
+  <p class="section-sub">Moving molecules the WRONG way — uphill against the gradient.</p>
+
+  <div class="callout callout-warn">
+    <p><strong>Active transport</strong> = movement of molecules from LOW → HIGH concentration (against the gradient) through a pump protein, requiring energy from <strong>ATP</strong>.</p>
+  </div>
+
+  <h3>How pump proteins work</h3>
+  <ol class="pretty">
+    <li>Molecule binds to a <strong>specific</strong> site on the pump (specific to certain molecules only).</li>
+    <li>ATP donates energy → causes a <span class="term">conformational change</span> (the pump's shape shifts).</li>
+    <li>The shape change moves the molecule to the other side and releases it.</li>
+    <li>Pump returns to original shape, ready for another cycle.</li>
+  </ol>
+
+  <div class="diagram">
+    <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 20 90 L 380 20" stroke="#666" stroke-width="2"/>
+      <circle cx="80" cy="80" r="12" fill="#4a7ab8"/>
+      <text x="60" y="115" font-size="11">low conc.</text>
+      <text x="130" y="65" font-size="12" fill="#c76a4a">⚡ ATP</text>
+      <path d="M 130 75 L 155 60" stroke="#c76a4a" stroke-width="2" marker-end="url(#arr3)"/>
+      <circle cx="200" cy="55" r="12" fill="#4a7ab8"/>
+      <circle cx="320" cy="30" r="12" fill="#4a7ab8"/>
+      <text x="290" y="15" font-size="11">high conc.</text>
+      <defs>
+        <marker id="arr3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#c76a4a"/>
+        </marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Pushing a ball uphill — requires energy!</div>
+  </div>
+
+  <h3>Facilitated diffusion vs. active transport</h3>
+  <table>
+    <tr><th></th><th>Facilitated diffusion</th><th>Active transport</th></tr>
+    <tr><td>Protein type</td><td>Channel</td><td>Pump</td></tr>
+    <tr><td>Direction</td><td>DOWN gradient (high → low)</td><td>UP gradient (low → high)</td></tr>
+    <tr><td>Energy?</td><td>❌ No ATP</td><td>✅ Requires ATP</td></tr>
+    <tr><td>Specificity</td><td>Yes (each channel is specific)</td><td>Yes (each pump is specific)</td></tr>
+  </table>
+
+  <h3>Example: absorbing minerals in plant roots 🌱</h3>
+  <p>Plants need mineral ions (like nitrate NO₃⁻) from the soil, but those ions are usually at <em>lower</em> concentration in the soil than inside the root cells. Root cells use active transport pumps to bring nitrate IN against the gradient, powered by ATP.</p>
+</section>
+
+<!-- ================ SELECTIVITY ================ -->
+<section id="selectivity">
+  <span class="section-tag">B2.1.8</span>
+  <h2 class="section-title">Selectivity in membrane permeability 🎛️</h2>
+  <p class="section-sub">How cells control exactly what gets in.</p>
+
+  <div class="callout">
+    <p><strong>Selective permeability</strong> = the membrane's ability to allow some substances through while blocking others.</p>
+  </div>
+
+  <h3>How the membrane achieves selectivity</h3>
+  <ul class="pretty">
+    <li><strong>Channels & pumps are specific</strong> to particular molecules — a Na⁺ channel only lets Na⁺ through, not K⁺.</li>
+    <li>The cell chooses which channels & pumps to build.</li>
+    <li>By adjusting the number and type of proteins, the cell can precisely control what enters/leaves.</li>
+  </ul>
+
+  <h3>Simple diffusion is NOT selective</h3>
+  <p>Simple diffusion doesn't pick and choose — it just depends on:</p>
+  <ul class="pretty">
+    <li>Size of the particle</li>
+    <li>Polarity or charge</li>
+    <li>Concentration gradient</li>
+  </ul>
+  <p>Any small nonpolar molecule can pass. The cell can't stop it. Real selectivity comes from <strong>channels and pumps</strong>, not from the bilayer itself.</p>
+
+  <h3>The full transport summary 🚦</h3>
+  <table>
+    <tr><th>Method</th><th>Direction</th><th>Protein?</th><th>Energy?</th><th>Selective?</th></tr>
+    <tr><td>Simple diffusion</td><td>Down gradient</td><td>No</td><td>No</td><td>No (based on physics only)</td></tr>
+    <tr><td>Facilitated diffusion</td><td>Down gradient</td><td>Yes (channel)</td><td>No</td><td>YES</td></tr>
+    <tr><td>Osmosis</td><td>Water follows solute</td><td>Yes (aquaporin)</td><td>No</td><td>YES (only water)</td></tr>
+    <tr><td>Active transport</td><td><strong>Up</strong> gradient</td><td>Yes (pump)</td><td>Yes (ATP)</td><td>YES</td></tr>
+  </table>
+
+  <div class="callout callout-video">
+    <a class="video-link" href="https://www.youtube.com/results?search_query=amoeba+sisters+cell+transport" target="_blank">Amoeba Sisters — Cell Transport</a>
+  </div>
+</section>
+
+<!-- ================ ORGANELLES B2.2.1 ================ -->
+<section id="organelles">
+  <span class="section-tag">B2.2.1</span>
+  <h2 class="section-title">Organelles as discrete subunits 🏛️</h2>
+  <p class="section-sub">Why the eukaryotic cell is divided into rooms.</p>
+
+  <div class="callout">
+    <p>An <strong>organelle</strong> is a discrete (separate, distinct) structure within a cell that is adapted to perform a specific function.</p>
+  </div>
+
+  <h3>Grouping organelles by membranes</h3>
+  <table>
+    <tr><th>Type</th><th>Examples</th></tr>
+    <tr>
+      <td><strong>Solid (no membrane)</strong></td>
+      <td>Ribosomes</td>
+    </tr>
+    <tr>
+      <td><strong>Single-membrane</strong></td>
+      <td>Endoplasmic reticulum, Golgi apparatus, vesicles, lysosomes, vacuoles</td>
+    </tr>
+    <tr>
+      <td><strong>Double-membrane</strong></td>
+      <td>Nucleus, mitochondrion, chloroplast</td>
+    </tr>
+  </table>
+
+  <h3>What is NOT an organelle</h3>
+  <p>These are structural or general parts of the cell, not organelles:</p>
+  <ul class="pretty">
+    <li><strong>Cell wall</strong> — structural boundary, not an organelle</li>
+    <li><strong>Cytoskeleton</strong> — network of protein filaments, structural role</li>
+    <li><strong>Cytoplasm</strong> — the medium in which organelles sit, not a specialized structure</li>
+  </ul>
+
+  <p>They don't count because they're either (a) general/structural rather than performing a specific discrete function, or (b) they're the environment the organelles live in.</p>
+</section>
+
+<!-- ================ NUCLEUS/CYTOPLASM SEPARATION ================ -->
+<section id="nucleus-compart">
+  <span class="section-tag">B2.2.2</span>
+  <h2 class="section-title">Separating the nucleus from cytoplasm 🧬</h2>
+  <p class="section-sub">Why eukaryotes lock their DNA away.</p>
+
+  <h3>The main benefit</h3>
+  <p>Keeping the DNA in the nucleus (separated from the cytoplasm) lets eukaryotes control the timing and processing of gene expression.</p>
+
+  <h3>Comparing prokaryotes and eukaryotes</h3>
+  <table>
+    <tr><th></th><th>Prokaryotes</th><th>Eukaryotes</th></tr>
+    <tr>
+      <td>Where does transcription (DNA → RNA) happen?</td>
+      <td>Cytoplasm (there's no nucleus)</td>
+      <td>Inside the nucleus</td>
+    </tr>
+    <tr>
+      <td>Where does translation (RNA → protein) happen?</td>
+      <td>Cytoplasm</td>
+      <td>Cytoplasm (at ribosomes)</td>
+    </tr>
+    <tr>
+      <td>Timing</td>
+      <td>Translation starts <em>while</em> transcription is still going!</td>
+      <td>Transcription must FINISH before translation begins.</td>
+    </tr>
+    <tr>
+      <td>Post-transcriptional modification?</td>
+      <td>❌ Not possible</td>
+      <td>✅ Yes — mRNA can be edited before leaving the nucleus</td>
+    </tr>
+  </table>
+
+  <h3>Why post-transcriptional modification isn't possible in prokaryotes</h3>
+  <p>In prokaryotes, the DNA is right there in the cytoplasm with the ribosomes. As soon as an mRNA molecule starts being made, ribosomes latch on and start translating it immediately. There's no time or space to modify the mRNA first.</p>
+
+  <p>In eukaryotes, mRNA is made in the nucleus, then <em>edited</em> (things like splicing out introns), and THEN sent out through nuclear pores to reach the ribosomes. This is only possible because the two compartments are separate.</p>
+
+  <div class="diagram" style="background:linear-gradient(135deg, #e0d7ee, #cfe3ee);">
+    <div style="font-size:14px;font-weight:600;">DNA <span style="color:var(--accent)">→ transcription →</span> raw mRNA <span style="color:var(--accent)">→ processing →</span> edited mRNA <span style="color:var(--accent)">→ translation →</span> Protein</div>
+  </div>
+</section>
+
 <!-- ================ COMPARTMENTALIZATION ================ -->
 <section id="compartments">
-  <span class="section-tag">B2.2.1 – B2.2.3</span>
-  <h2 class="section-title">Compartmentalization 🏘️</h2>
-  <p class="section-sub">Why bother having all those organelles? Here's the answer.</p>
+  <span class="section-tag">B2.2.3</span>
+  <h2 class="section-title">Advantages of compartmentalization 🏘️</h2>
+  <p class="section-sub">Why bother having all those organelles?</p>
 
-  <h3>Advantages of having compartments</h3>
   <div class="card-grid">
     <div class="card">
       <div class="emoji">⚡</div>
       <h4>Efficient metabolism</h4>
-      <p>Enzymes and substrates can be concentrated together in one small space.</p>
+      <p>Enzymes and substrates can be concentrated in small spaces → reactions happen faster.</p>
     </div>
     <div class="card">
       <div class="emoji">🧪</div>
       <h4>Local conditions</h4>
-      <p>Different pH, ion concentrations, etc. can be maintained in different organelles.</p>
+      <p>Each organelle can maintain its own optimal pH, ion concentration, etc. — different from the rest of the cell.</p>
     </div>
     <div class="card">
       <div class="emoji">☠️</div>
       <h4>Toxic isolation</h4>
-      <p>Dangerous things (digestive enzymes in lysosomes) are locked away so they don't destroy the cell.</p>
+      <p>Dangerous chemicals kept safely locked away where they can't damage the cell.</p>
     </div>
     <div class="card">
       <div class="emoji">🔀</div>
       <h4>Flexibility</h4>
-      <p>Cell can adjust numbers of organelles based on need (e.g. more mitochondria = more energy).</p>
+      <p>Cell can change the number of each organelle based on need (e.g. more mitochondria = more energy).</p>
     </div>
   </div>
 
-  <h3>Why separate the nucleus from the cytoplasm?</h3>
-  <p>Because it lets eukaryotes do <span class="term">post-transcriptional modification</span> — the mRNA can be edited AFTER being copied from DNA but BEFORE it reaches ribosomes. Prokaryotes can't do this; their ribosomes start translating while mRNA is still being made.</p>
-
-  <div class="diagram" style="background:linear-gradient(135deg, #e0d7ee, #cfe3ee);">
-    <div style="font-size:14px;font-weight:600;">DNA <span style="color:var(--accent)">→ transcription →</span> mRNA <span style="color:var(--accent)">→ processing →</span> edited mRNA <span style="color:var(--accent)">→ translation →</span> Protein</div>
+  <h3>The lysosome example 🧨</h3>
+  <div class="callout">
+    <p><strong>Lysosomes</strong> contain powerful <span class="term">digestive enzymes</span> (like proteases and lipases). If these enzymes floated free in the cytoplasm, they would digest the cell itself!</p>
+    <p>By locking them inside a membrane-bound compartment (the lysosome), the cell can:</p>
+    <ul class="pretty">
+      <li>Safely store digestive enzymes without harm</li>
+      <li>Merge lysosomes with food vacuoles to digest food</li>
+      <li>Merge lysosomes with old/damaged organelles to recycle them</li>
+    </ul>
   </div>
 </section>
 
@@ -1152,26 +1605,29 @@
   <h2 class="section-title">Stem cells & differentiation 🌱</h2>
   <p class="section-sub">How one fertilized egg becomes 200+ cell types.</p>
 
-  <h3>What is a stem cell?</h3>
-  <p>A cell with two superpowers:</p>
+  <h3>The story of you</h3>
   <ol class="pretty">
-    <li>Can <strong>divide endlessly</strong> to make more copies of itself.</li>
-    <li>Can <strong>differentiate</strong> into specialized cell types.</li>
-  </ol>
-
-  <h3>The story</h3>
-  <ol class="pretty">
-    <li>Sperm + egg = zygote (a single stem cell)</li>
+    <li>Sperm + egg → <strong>zygote</strong> (a single unspecialized cell)</li>
     <li>Zygote divides many times → <strong>blastocyst</strong> (hollow ball with inner cell mass)</li>
-    <li>Stem cells detect <span class="term">morphogens</span> — signal molecules whose concentration tells them what to become</li>
-    <li>They <strong>differentiate</strong> by turning some genes on and others off</li>
-    <li>Result: muscle cell, neuron, red blood cell, skin cell, etc.</li>
+    <li>Stem cells detect <span class="term">morphogens</span> (chemical gradients) telling them what to become</li>
+    <li>They <strong>differentiate</strong> by expressing some genes and silencing others</li>
+    <li>Result: muscle cells, neurons, red blood cells, skin cells, etc.</li>
   </ol>
 
   <div class="callout callout-tip">
-    <h4>🎯 Morphogens</h4>
-    <p>These are chemicals released from a <strong>source cell</strong>. Cells CLOSE to the source detect high concentrations; cells FAR from the source detect low concentrations. So the same signal creates different tissues in a gradient across the embryo!</p>
+    <h4>🎯 Morphogens & chemical gradients</h4>
+    <p>Morphogens are signal molecules released from "source cells." Their concentration decreases with distance from the source. Cells at different distances see different concentrations, which turns on different genes → they develop into different tissue types. This is how a symmetrical embryo turns into a body with organs in specific places.</p>
   </div>
+
+  <h3>What is differentiation?</h3>
+  <p><strong>Differentiation</strong> = the process by which a cell becomes specialized for a particular function. It happens by <em>gene expression</em> — every cell has the same DNA, but only some genes are "switched on" in each cell type. A muscle cell has the exact same DNA as a neuron, but they use different genes.</p>
+
+  <h3>Properties of stem cells</h3>
+  <p>All stem cells have two superpowers:</p>
+  <ol class="pretty">
+    <li><strong>Self-renewal</strong> — can divide endlessly to make more copies of themselves.</li>
+    <li><strong>Potency</strong> — can differentiate into specialized cell types.</li>
+  </ol>
 
   <h3>Types of stem cells — the potency ladder</h3>
   <table>
@@ -1179,7 +1635,7 @@
     <tr>
       <td><strong>Totipotent</strong></td>
       <td><em>Anything</em> — including placenta cells</td>
-      <td>Zygote (days 0–4)</td>
+      <td>Zygote (days 0–4 after fertilization)</td>
     </tr>
     <tr>
       <td><strong>Pluripotent</strong></td>
@@ -1189,25 +1645,26 @@
     <tr>
       <td><strong>Multipotent</strong></td>
       <td>A few related cell types</td>
-      <td>Bone marrow → any blood cell</td>
-    </tr>
-    <tr>
-      <td><strong>Unipotent</strong></td>
-      <td>One cell type only</td>
-      <td>Skin (epidermal) stem cells</td>
+      <td>Bone marrow → any type of blood cell</td>
     </tr>
   </table>
 
+  <div class="callout">
+    <h4>🤔 Why are pluripotent cells most common in early embryos?</h4>
+    <p>Because the embryo needs to build EVERY tissue type of the body from scratch. Once tissues are formed, most stem cells become multipotent (only need to replace one tissue type). So pluripotent cells are only really needed early on.</p>
+  </div>
+
   <h3>Stem cell niches in adults</h3>
-  <p>Even adults have some stem cells left over. They live in special microenvironments called <strong>niches</strong>, where <em>niche cells</em> keep them in the right conditions to divide & differentiate when needed:</p>
+  <p>Even after development, some stem cells stick around in special microenvironments called <span class="term">niches</span>:</p>
+
   <div class="two-col">
     <div class="callout">
       <h4>🦴 Bone marrow niche</h4>
-      <p><strong>Hematopoietic stem cells (HSCs)</strong> make new blood cells (red, white, platelets). This is <em>hematopoiesis</em>.</p>
+      <p>Contains <strong>hematopoietic stem cells</strong>. Multipotent — they produce all types of blood cells (red, white, platelets). Location: inside long bones like the femur.</p>
     </div>
     <div class="callout callout-tip">
       <h4>💇 Hair follicle niche</h4>
-      <p>Located in a <strong>bulge</strong> in the follicle. Multipotent — can regenerate skin & hair tissues. Huge therapeutic potential.</p>
+      <p>Multipotent stem cells found in a "bulge" region of the hair follicle. Can regenerate skin and hair tissues. Big potential for medical treatments.</p>
     </div>
   </div>
 
@@ -1217,36 +1674,91 @@
   </div>
 </section>
 
+<!-- ================ CELL SIZE ================ -->
+<section id="cell-size">
+  <span class="section-tag">B2.3.5</span>
+  <h2 class="section-title">Cell size as an aspect of specialization 📏</h2>
+  <p class="section-sub">Different jobs need very different sizes.</p>
+
+  <p>Human cells vary enormously in size — the egg cell is about <strong>100,000× bigger</strong> by volume than the sperm cell! Each size is matched to the cell's job.</p>
+
+  <table>
+    <tr><th>Cell type</th><th>Size</th><th>Why?</th></tr>
+    <tr>
+      <td><strong>Sperm cell</strong> 🏊</td>
+      <td>Very small (~30 μm³)</td>
+      <td>Needs to swim fast to reach the egg. Minimal cytoplasm to reduce weight; long flagellum for propulsion.</td>
+    </tr>
+    <tr>
+      <td><strong>Egg cell (ovum)</strong> 🥚</td>
+      <td>Huge (~4,000,000 μm³)</td>
+      <td>Needs to store nutrients for the early embryo before implantation. Huge cytoplasm loaded with supplies.</td>
+    </tr>
+    <tr>
+      <td><strong>Red blood cell</strong> 🩸</td>
+      <td>Small (~7.5 × 2 μm)</td>
+      <td>Must squeeze through tiny capillaries (~8 μm diameter). Biconcave shape maximises surface area for O₂ exchange.</td>
+    </tr>
+    <tr>
+      <td><strong>White blood cell</strong> 🛡️</td>
+      <td>Medium (10–21 μm)</td>
+      <td>Lymphocytes (~10 μm) secrete antibodies. Macrophages (~21 μm) engulf whole pathogens — need to be big.</td>
+    </tr>
+    <tr>
+      <td><strong>Neuron</strong> 🧠</td>
+      <td>Very long (up to 1 metre) but narrow (~10 μm diameter)</td>
+      <td>Long axon carries electrical signals over long distances (e.g. from spine to foot). Narrow so signals travel fast.</td>
+    </tr>
+    <tr>
+      <td><strong>Skeletal muscle fiber</strong> 💪</td>
+      <td>Long (2–3 cm), 10–100 μm diameter</td>
+      <td>Length allows for greater contraction. Multiple nuclei needed to control the whole cell.</td>
+    </tr>
+  </table>
+</section>
+
 <!-- ================ SA:VOL ================ -->
 <section id="sa-vol">
-  <span class="section-tag">B2.3.5, B2.3.6</span>
+  <span class="section-tag">B2.3.6</span>
   <h2 class="section-title">Surface area to volume ratio 📐</h2>
   <p class="section-sub">The single reason cells are so small.</p>
 
   <div class="callout">
-    <p>Everything the cell needs (O₂, glucose) has to <strong>cross the membrane</strong>. So <strong>surface area</strong> = how fast stuff can enter/leave.</p>
-    <p>Meanwhile, <strong>volume</strong> = how much stuff the cell needs. Bigger cell = more demand.</p>
+    <p>Everything the cell needs (O₂, glucose) must <strong>cross the membrane</strong>. So <strong>surface area</strong> = how fast stuff can enter/leave.</p>
+    <p>Meanwhile, <strong>volume</strong> = how much material the cell has to feed. Bigger cell = more demand.</p>
   </div>
 
-  <h3>The problem</h3>
-  <p>When a cell gets bigger, volume grows <em>faster</em> than surface area. Imagine a cube:</p>
+  <h3>The problem: geometry hates you</h3>
+  <p>When a cell gets bigger, volume grows <em>faster</em> than surface area. Imagine cube-shaped cells of different sizes:</p>
+
   <table>
-    <tr><th>Side</th><th>SA (6s²)</th><th>Vol (s³)</th><th>SA:Vol</th></tr>
+    <tr><th>Side length</th><th>SA (6s²)</th><th>Volume (s³)</th><th>SA:Vol ratio</th></tr>
     <tr><td>1</td><td>6</td><td>1</td><td><strong>6 : 1</strong> 😄</td></tr>
     <tr><td>2</td><td>24</td><td>8</td><td>3 : 1</td></tr>
     <tr><td>4</td><td>96</td><td>64</td><td>1.5 : 1</td></tr>
     <tr><td>10</td><td>600</td><td>1000</td><td><strong>0.6 : 1</strong> 😰</td></tr>
   </table>
 
-  <p>See? A cell that gets too big literally can't absorb enough nutrients to feed itself. This is why cells stay small — and if they need more area, they either:</p>
+  <p>See? A cell that gets too big literally can't absorb enough nutrients to feed itself.</p>
+
+  <h3>Why cells are limited by SA:V ratio</h3>
   <ul class="pretty">
-    <li>Stay small and divide</li>
-    <li>Grow special shapes (long & thin like neurons, or covered in <strong>microvilli</strong> like intestinal cells)</li>
+    <li>Materials that must ENTER the cell (O₂, nutrients) enter through the membrane → depend on <strong>surface area</strong>.</li>
+    <li>Waste that must LEAVE the cell (CO₂, metabolic waste) also crosses the membrane → depends on surface area.</li>
+    <li>The AMOUNT of these materials needed depends on how much cell there is → <strong>volume</strong>.</li>
+    <li>If SA:V drops too low, the cell can't exchange materials fast enough → dies.</li>
+  </ul>
+
+  <h3>Solutions cells use</h3>
+  <ul class="pretty">
+    <li><strong>Stay small</strong> and divide when they get too big</li>
+    <li><strong>Become long & thin</strong> (like neurons) — high surface area, small volume</li>
+    <li><strong>Grow folds/projections</strong> like <span class="term">microvilli</span> on intestinal cells to increase surface area without much volume</li>
   </ul>
 
   <div class="callout callout-tip">
     <h4>🧠 One-line takeaway</h4>
-    <p><strong>Big cells starve.</strong> That's why we're multicellular, and why intestinal cells have those little finger-like microvilli.</p>
+    <p><strong>Big cells starve.</strong> That's why we're multicellular, and why absorptive cells have microvilli.</p>
   </div>
 </section>
 
@@ -1257,22 +1769,25 @@
 
   <ul class="pretty">
     <li><strong>Draw big.</strong> Small drawings lose marks for clarity. Fill the space.</li>
-    <li><strong>Label with lines that touch the structure.</strong> A label line ending in empty space = no mark.</li>
-    <li><strong>Give function AND structure.</strong> If asked to "annotate," you MUST include what the structure does.</li>
-    <li><strong>Use IB command terms carefully.</strong> "Outline" = short list. "Explain" = give reasons. "Compare" = similarities AND differences.</li>
-    <li><strong>Check units in magnification questions.</strong> Convert everything to the same unit BEFORE dividing.</li>
-    <li><strong>Watch for the trick word "all."</strong> "All cells have ribosomes" ✅. "All cells have mitochondria" ❌ (prokaryotes don't).</li>
+    <li><strong>Label with lines that TOUCH the structure.</strong> A label line ending in empty space = no mark.</li>
+    <li><strong>Give function AND structure when asked to "annotate."</strong> Just labelling loses marks.</li>
+    <li><strong>Match the command term.</strong> "Outline" = short list. "Explain" = give reasons. "Compare & contrast" = similarities AND differences.</li>
+    <li><strong>Convert units BEFORE dividing</strong> in magnification questions. Common mistake.</li>
+    <li><strong>Watch the word "all."</strong> "All cells have ribosomes" ✅. "All cells have mitochondria" ❌ (prokaryotes don't).</li>
     <li><strong>Memorize these lists exactly:</strong> the 4 features common to all cells, MR H GREN, CRATER, the potency ladder.</li>
+    <li><strong>Cell wall = draw two lines</strong> with the label between them. Same for the double membrane of nucleus/mitochondria.</li>
   </ul>
 
   <div class="callout callout-warn">
-    <h4>⚠️ Classic exam traps</h4>
+    <h4>⚠️ Classic exam traps to avoid</h4>
     <ul style="margin-top:8px;">
+      <li>Saying prokaryotes have a nucleus (they don't — just a nucleoid REGION, no membrane)</li>
       <li>Confusing hyper/hypotonic → remember "solute sucks"</li>
-      <li>Saying prokaryotes have a nucleus (they don't — just a nucleoid REGION)</li>
       <li>Forgetting active transport needs ATP</li>
       <li>Writing "diffuses through channel protein" for O₂ — that's simple diffusion, no protein needed!</li>
       <li>Confusing rough ER (proteins) with smooth ER (lipids)</li>
+      <li>Mixing up magnification with resolution</li>
+      <li>Calling the cytoskeleton or cell wall an organelle (they're not)</li>
     </ul>
   </div>
 </section>
@@ -1281,7 +1796,7 @@
 <section id="quiz">
   <span class="section-tag">Test yourself</span>
   <h2 class="section-title">Self-quiz 🎓</h2>
-  <p class="section-sub">Click each question to reveal the answer. No cheating!</p>
+  <p class="section-sub">Click each question to reveal the answer. 25 questions covering the whole syllabus.</p>
 
   <div class="quiz">
     <details>
@@ -1291,123 +1806,159 @@
       </div>
     </details>
     <details>
-      <summary>2. Name the four features common to ALL cells.</summary>
+      <summary>2. What's the difference between "theory" in daily language vs. science?</summary>
       <div class="answer">
-        <strong>Answer:</strong> DNA, cytoplasm, ribosomes, plasma membrane.
+        <strong>Answer:</strong> In daily language, a "theory" is just a guess. In science, a theory is a well-supported explanation backed by extensive evidence — much stronger than a guess.
       </div>
     </details>
     <details>
-      <summary>3. Formula for magnification?</summary>
+      <summary>3. Distinguish inductive from deductive reasoning.</summary>
       <div class="answer">
-        <strong>Answer:</strong> Magnification = drawing size ÷ actual size. Always convert units first!
+        <strong>Inductive:</strong> many specific observations → general rule.<br>
+        <strong>Deductive:</strong> general rule → specific prediction.
       </div>
     </details>
     <details>
-      <summary>4. Give one advantage and one disadvantage of the electron microscope vs. light microscope.</summary>
+      <summary>4. Formula for magnification? Formula for actual size?</summary>
+      <div class="answer">
+        <strong>Magnification</strong> = drawing size ÷ actual size.<br>
+        <strong>Actual size</strong> = drawing size ÷ magnification.<br>
+        Always convert units first (1 mm = 1,000 μm = 1,000,000 nm)!
+      </div>
+    </details>
+    <details>
+      <summary>5. What's the difference between magnification and resolution?</summary>
+      <div class="answer">
+        <strong>Magnification:</strong> how much bigger the image looks.<br>
+        <strong>Resolution:</strong> the smallest distance at which you can still tell two things apart. High magnification without resolution = blurry mess.
+      </div>
+    </details>
+    <details>
+      <summary>6. Give one advantage and one disadvantage of the electron microscope vs. light microscope.</summary>
       <div class="answer">
         <strong>Advantage:</strong> Much higher magnification & resolution. <strong>Disadvantage:</strong> Sample must be dead; images are only in black & white; very expensive.
       </div>
     </details>
     <details>
-      <summary>5. Prokaryote DNA vs. eukaryote DNA — three differences?</summary>
+      <summary>7. Outline immunofluorescence.</summary>
       <div class="answer">
-        <strong>Prokaryote:</strong> naked (no histones), circular/looped, in nucleoid region.<br>
+        <strong>Answer:</strong> Fluorescent dyes are attached to antibodies. The antibodies bind specifically to one type of protein, which then glows under UV light — letting you see that specific structure in the cell.
+      </div>
+    </details>
+    <details>
+      <summary>8. Name the four features common to ALL cells.</summary>
+      <div class="answer">
+        <strong>Answer:</strong> DNA, cytoplasm, ribosomes, plasma membrane.
+      </div>
+    </details>
+    <details>
+      <summary>9. What does "naked" DNA mean?</summary>
+      <div class="answer">
+        <strong>Answer:</strong> The DNA is not wrapped around any proteins (like histones). In prokaryotes, DNA is naked; in eukaryotes, it's wrapped around histone proteins.
+      </div>
+    </details>
+    <details>
+      <summary>10. Compare prokaryotic and eukaryotic DNA.</summary>
+      <div class="answer">
+        <strong>Prokaryote:</strong> naked, circular, in nucleoid region.<br>
         <strong>Eukaryote:</strong> bound to histones, linear, inside nucleus.
       </div>
     </details>
     <details>
-      <summary>6. What does the rough ER do and how is it different from smooth ER?</summary>
+      <summary>11. What does the rough ER do and how is it different from smooth ER?</summary>
       <div class="answer">
-        <strong>Rough ER:</strong> covered in ribosomes; makes proteins for export.<br>
+        <strong>Rough ER:</strong> covered in ribosomes; makes proteins for export or membrane.<br>
         <strong>Smooth ER:</strong> no ribosomes; makes lipids and detoxifies drugs.
       </div>
     </details>
     <details>
-      <summary>7. What are the 8 functions of life (MR H GREN)?</summary>
+      <summary>12. What are the 8 functions of life (MR H GREN)?</summary>
       <div class="answer">
         <strong>M</strong>etabolism, <strong>R</strong>esponse, <strong>H</strong>omeostasis, <strong>G</strong>rowth, <strong>R</strong>eproduction, <strong>E</strong>xcretion, <strong>N</strong>utrition — plus Movement.
       </div>
     </details>
     <details>
-      <summary>8. What is the cell wall of plants made of? Fungi?</summary>
+      <summary>13. Describe how Paramecium performs the functions of life.</summary>
+      <div class="answer">
+        <strong>Answer:</strong> Uses cilia to swim (movement); detects chemicals (response); sweeps food into oral groove & digests in food vacuoles (nutrition & metabolism); contractile vacuoles pump out excess water (homeostasis); waste diffuses across membrane (excretion); reproduces by binary fission.
+      </div>
+    </details>
+    <details>
+      <summary>14. What's the cell wall of plants made of? Fungi?</summary>
       <div class="answer">
         <strong>Plants:</strong> cellulose. <strong>Fungi:</strong> chitin.
       </div>
     </details>
     <details>
-      <summary>9. Why do red blood cells not have a nucleus?</summary>
+      <summary>15. Describe features of RBCs, skeletal muscle fibers, aseptate fungal hyphae, and phloem sieve tubes that make them atypical.</summary>
       <div class="answer">
-        <strong>Answer:</strong> A nucleus (~10 μm) is too big to fit through capillaries (~8 μm). RBCs eject it during development so they can squeeze through.
+        <strong>Red blood cells:</strong> no nucleus (ejected during development so they fit through capillaries).<br>
+        <strong>Skeletal muscle fibers:</strong> many nuclei (too long for one nucleus to control).<br>
+        <strong>Aseptate fungal hyphae:</strong> many nuclei (same reason).<br>
+        <strong>Phloem sieve tubes:</strong> no nucleus (removed to leave hollow tube for sap flow).
       </div>
     </details>
     <details>
-      <summary>10. What does "amphipathic" mean and why is it important?</summary>
+      <summary>16. Why is the hydrophobic core of the bilayer a barrier?</summary>
       <div class="answer">
-        <strong>Answer:</strong> Having both hydrophilic (water-loving) and hydrophobic (water-hating) parts. Phospholipids are amphipathic — that's why they spontaneously form bilayers in water.
+        <strong>Answer:</strong> The nonpolar hydrocarbon chains repel polar molecules (like water and glucose) and charged particles (ions). Large molecules also can't squeeze through. Only small nonpolar molecules can cross freely.
       </div>
     </details>
     <details>
-      <summary>11. Name 4 kinds of molecules that CAN'T cross the membrane by simple diffusion, and why.</summary>
+      <summary>17. List the 6 functions of membrane proteins (CRATER).</summary>
       <div class="answer">
-        <strong>Answer:</strong> Large molecules (like glucose), polar molecules (like water — needs aquaporin), and charged ions (Na⁺, Cl⁻). They can't get through the nonpolar hydrocarbon core.
+        <strong>C</strong>onnect (intercellular joinings) · <strong>R</strong>ecognize (cell-cell recognition) · <strong>A</strong>nchor (attachment) · <strong>T</strong>ransport · <strong>E</strong>nzymatic activity · <strong>R</strong>eceptors (signal transduction).
       </div>
     </details>
     <details>
-      <summary>12. Give the CRATER functions of membrane proteins.</summary>
+      <summary>18. Compare integral and peripheral proteins.</summary>
       <div class="answer">
-        <strong>C</strong>onnect · <strong>R</strong>ecognize · <strong>A</strong>nchor · <strong>T</strong>ransport · <strong>E</strong>nzymes · <strong>R</strong>eceptors.
+        <strong>Integral:</strong> embedded within the bilayer (often spanning it); anchored by hydrophobic amino acids in the fatty core.<br>
+        <strong>Peripheral:</strong> attached only to the surface; do not cross the membrane.
       </div>
     </details>
     <details>
-      <summary>13. What's the difference between facilitated diffusion and active transport?</summary>
+      <summary>19. Define osmosis.</summary>
       <div class="answer">
-        <strong>Facilitated diffusion:</strong> passive, moves DOWN concentration gradient through a channel protein, no ATP.<br>
-        <strong>Active transport:</strong> moves UP concentration gradient through a pump protein, requires ATP.
+        <strong>Answer:</strong> The passive movement of water molecules through a selectively permeable membrane, from an area of low solute concentration to an area of high solute concentration.
       </div>
     </details>
     <details>
-      <summary>14. Define osmosis.</summary>
+      <summary>20. If a red blood cell is placed in pure water, what happens?</summary>
       <div class="answer">
-        <strong>Answer:</strong> The passive movement of water molecules through a selectively permeable membrane, from an area of low solute concentration to an area of high solute concentration (via aquaporins).
+        <strong>Answer:</strong> Pure water is <em>hypotonic</em>. Water rushes IN by osmosis. RBC swells and eventually bursts (lysis).
       </div>
     </details>
     <details>
-      <summary>15. If a red blood cell is placed in pure water, what happens?</summary>
+      <summary>21. List the 4 types of gated channel proteins.</summary>
       <div class="answer">
-        <strong>Answer:</strong> Pure water is <em>hypotonic</em> to the cell. Water rushes IN by osmosis. RBC swells and eventually bursts (lysis).
+        <strong>Answer:</strong> Voltage-gated, ligand-gated, mechanically-gated, light-gated.
       </div>
     </details>
     <details>
-      <summary>16. Give 3 advantages of compartmentalization in eukaryotic cells.</summary>
+      <summary>22. Compare facilitated diffusion and active transport.</summary>
       <div class="answer">
-        <strong>Answer:</strong> (1) Enzymes and substrates concentrated → more efficient. (2) Local conditions like pH can be optimized. (3) Toxic/damaging substances (e.g. digestive enzymes) can be isolated in specific organelles (lysosomes).
+        <strong>Facilitated diffusion:</strong> passive, DOWN gradient, uses a channel, no ATP.<br>
+        <strong>Active transport:</strong> uses a pump, UP gradient, requires ATP. Pump undergoes conformational (shape) change to move molecule.
       </div>
     </details>
     <details>
-      <summary>17. What's the difference between totipotent, pluripotent, and multipotent stem cells?</summary>
+      <summary>23. Why can't prokaryotes do post-transcriptional modification?</summary>
       <div class="answer">
-        <strong>Totipotent:</strong> can become ANY cell, including placenta. Only in very early embryo.<br>
-        <strong>Pluripotent:</strong> can become any body cell (not placenta). Found in inner cell mass of blastocyst.<br>
-        <strong>Multipotent:</strong> can become a few related types. Bone marrow (blood cells).
+        <strong>Answer:</strong> Prokaryotes lack a nucleus, so DNA and ribosomes are in the same compartment (cytoplasm). Translation starts on the mRNA before transcription is even finished — no time or space for modification.
       </div>
     </details>
     <details>
-      <summary>18. Why do cells stay small?</summary>
+      <summary>24. Give 3 advantages of compartmentalization + why lysosomes are a great example.</summary>
       <div class="answer">
-        <strong>Answer:</strong> As a cell gets bigger, volume increases faster than surface area. Eventually SA:Vol becomes too small for enough materials to enter/leave. So cells either stay small, divide, or develop shapes like microvilli that increase surface area.
+        <strong>Advantages:</strong> (1) Enzymes and substrates concentrated → more efficient reactions. (2) Local conditions (pH, ion concentration) can be optimized. (3) Toxic substances isolated safely.<br>
+        <strong>Lysosome example:</strong> contains digestive enzymes that would destroy the cell if released. The membrane keeps them safely contained.
       </div>
     </details>
     <details>
-      <summary>19. What are morphogens and how do they work?</summary>
+      <summary>25. Explain why cells are limited in size by SA:V ratio.</summary>
       <div class="answer">
-        <strong>Answer:</strong> Signaling chemicals secreted by source cells. They form a concentration gradient — nearby cells detect high concentrations, distant cells detect low. Different concentrations trigger different genes to switch on, causing cells to differentiate into different tissue types.
-      </div>
-    </details>
-    <details>
-      <summary>20. Name two stem cell niches in adult humans and what they do.</summary>
-      <div class="answer">
-        <strong>Bone marrow:</strong> hematopoietic stem cells → all types of blood cells.<br>
-        <strong>Hair follicle bulge:</strong> multipotent stem cells → regenerate skin and hair tissues.
+        <strong>Answer:</strong> As cells grow, volume increases faster than surface area (V = s³ vs SA = 6s²). Eventually SA:V drops too low, and the cell can't absorb enough oxygen/nutrients or expel waste fast enough. So cells either stay small, divide, or develop shape adaptations (like microvilli) to increase surface area.
       </div>
     </details>
   </div>
